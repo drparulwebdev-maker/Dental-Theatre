@@ -28,13 +28,13 @@ export function CTASection() {
 
             <div className="relative z-10 flex flex-col items-center justify-between gap-10 lg:flex-row">
               <div className="max-w-xl text-center lg:text-left">
-                <p className="mb-4 text-[11px] font-semibold tracking-[0.3em] text-white/60 uppercase">
+                <p className="mb-4 text-[11px] font-bold tracking-[0.3em] text-white/60 uppercase">
                   Start Today
                 </p>
                 <h2 className="mb-4 font-heading text-4xl leading-none md:text-5xl">
                   Ready for Your Theatrical Transformation?
                 </h2>
-                <p className="text-[15px] leading-relaxed text-primary-foreground/70">
+                <p className="text-[15px] leading-[1.85] text-primary-foreground/74">
                   Book your appointment and take the first step toward a healthier, brighter,
                   more confident smile with a clinic experience that already feels elevated.
                 </p>

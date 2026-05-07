@@ -16,13 +16,13 @@ export function ServicesPreview() {
       <div className="container mx-auto max-w-7xl px-6 lg:px-10">
         <div className="mx-auto mb-14 flex max-w-2xl flex-col items-center text-center">
           <FadeIn direction="up">
-            <p className="mb-3 text-[11px] font-semibold tracking-[0.3em] text-primary uppercase">
+            <p className="mb-3 text-[11px] font-bold tracking-[0.3em] text-primary uppercase">
               What We Offer
             </p>
             <h2 className="mb-4 font-heading text-4xl leading-none md:text-5xl">
               Our Specialised Treatments
             </h2>
-            <p className="text-[15px] leading-relaxed text-muted-foreground">
+            <p className="text-[15px] leading-[1.85] text-muted-foreground">
               From routine check-ups to advanced cosmetic procedures, every service is shaped
               around patient comfort, aesthetic detail, and clinical precision.
             </p>
@@ -31,8 +31,8 @@ export function ServicesPreview() {
 
         <StaggerContainer className="grid grid-cols-1 gap-5 md:grid-cols-2 lg:grid-cols-3">
           {siteConfig.services.map((service, index) => {
-            const iconMap = LucideIcons as Record<string, LucideIcons.LucideIcon>;
-            const Icon = iconMap[service.icon] || LucideIcons.Activity;
+            const iconMap = LucideIcons as unknown as Record<string, LucideIcons.LucideIcon>;
+            const Icon = (iconMap[service.icon] as LucideIcons.LucideIcon) || LucideIcons.Activity;
 
             return (
               <FadeIn key={service.slug} direction="up" delay={index * 0.08}>
@@ -42,10 +42,10 @@ export function ServicesPreview() {
                     <div className="mb-4 flex size-11 items-center justify-center rounded-2xl border border-primary/10 bg-primary/8 text-primary transition-colors duration-300 group-hover:border-primary group-hover:bg-primary group-hover:text-white">
                       <Icon className="size-5" />
                     </div>
-                    <CardTitle className="text-base leading-snug font-semibold transition-colors group-hover:text-primary">
+                    <CardTitle className="text-base leading-snug font-bold transition-colors group-hover:text-primary">
                       {service.title}
                     </CardTitle>
-                    <CardDescription className="mt-1.5 text-sm leading-relaxed text-muted-foreground">
+                    <CardDescription className="mt-1.5 text-sm leading-[1.75] text-muted-foreground">
                       {service.description}
                     </CardDescription>
                   </CardHeader>

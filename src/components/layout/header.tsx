@@ -23,8 +23,7 @@ const navItems = [
   { title: "About", href: "/about" },
   { title: "Services", href: "/services" },
   { title: "Gallery", href: "/gallery" },
-  { title: "Testimonials", href: "/testimonials" },
-  { title: "Contact", href: "/contact" },
+  { title: "Contact", href: "/#locations" },
 ];
 
 export function Header() {

@@ -1,9 +1,10 @@
 "use client";
 
+import Image from "next/image";
 import { FadeIn, StaggerContainer } from "@/components/ui-custom/animations";
 import { Badge } from "@/components/ui/badge";
 import { Card, CardContent } from "@/components/ui/card";
-import { Award, GraduationCap, Briefcase, Heart, CheckCircle2 } from "lucide-react";
+import { Award, GraduationCap, Briefcase, CheckCircle2 } from "lucide-react";
 
 export default function AboutPage() {
   const credentials = [
@@ -41,10 +42,12 @@ export default function AboutPage() {
             {/* Image placeholder */}
             <FadeIn direction="right">
               <div className="relative aspect-[4/5] rounded-2xl overflow-hidden shadow-2xl shadow-primary/10 ring-1 ring-border/40">
-                <div className="absolute inset-0 bg-gradient-to-br from-primary/40 via-primary/20 to-sky-300/20" />
-                <div className="absolute inset-0 flex items-center justify-center">
-                  <Heart className="size-20 text-white/20" />
-                </div>
+                <Image
+                  src="/hero_image.jpeg"
+                  alt="Dr. Parul Jangra"
+                  fill
+                  className="object-cover object-top"
+                />
                 <div className="absolute bottom-0 inset-x-0 bg-gradient-to-t from-black/70 via-black/30 to-transparent px-6 py-5">
                   <p className="text-white font-semibold text-lg">Dr. Parul Jangra</p>
                   <p className="text-white/65 text-xs mt-0.5 font-light">BDS, MDS · Oral & Dental Surgeon</p>

@@ -109,7 +109,7 @@ export default function ServicesPage() {
               render={<Link href={siteConfig.links.whatsapp} target="_blank" />}
             >
               <MessageSquare className="mr-2 size-4" />
-              Get a Free Consultation
+              Book Consultation
             </Button>
           </FadeIn>
         </div>
