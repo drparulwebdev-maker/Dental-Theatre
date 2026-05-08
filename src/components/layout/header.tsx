@@ -61,9 +61,9 @@ export function Header() {
               ))}
             </NavigationMenuList>
           </NavigationMenu>
-          <Button nativeButton={false} render={<Link href={siteConfig.links.whatsapp} target="_blank" />}>
-            <MessageSquare className="mr-2 size-4" />
-            Book Now
+          <Button nativeButton={false} render={<Link href={`tel:${siteConfig.locations[0].phone}`} />}>
+            <Phone className="mr-2 size-4" />
+            Call Us
           </Button>
         </div>
 

@@ -47,4 +47,5 @@ Main Sanoli Road, Marble/Pathar Market Near Chhoker Petrol Pump, Panipat
 
 > Number
 
-89300-10599
+ph no - 8930244673, 8930244673
+Whatsapp no - 8930010599

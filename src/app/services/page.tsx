@@ -130,7 +130,8 @@ export default function ServicesPage() {
               <Button
                 nativeButton={false}
                 size="lg"
-                className="h-14 rounded-xl bg-white px-8 text-[15px] font-bold text-primary shadow-[0_8px_25px_rgb(0,0,0,0.15)] hover:bg-slate-50"
+                variant="secondary"
+                className="h-14 rounded-xl bg-white px-8 text-[15px] font-bold text-primary shadow-[0_8px_25px_rgb(0,0,0,0.15)] hover:bg-slate-50 hover:text-primary"
                 render={<Link href={siteConfig.links.whatsapp} target="_blank" />}
               >
                 <MessageSquare className="mr-2 size-4" />

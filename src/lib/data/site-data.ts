@@ -14,7 +14,7 @@ export const siteConfig = {
     },
   ],
   links: {
-    whatsapp: "https://wa.me/919876543210", // Placeholder
+    whatsapp: "https://wa.me/918930010599?text=Hello!%20I%20would%20like%20to%20book%20an%20appointment%20at%20Dental%20Theatre.",
     instagram: "https://instagram.com/dentaltheatre",
     facebook: "https://facebook.com/dentaltheatre",
     youtube: "https://youtube.com/dentaltheatre",
@@ -23,21 +23,21 @@ export const siteConfig = {
     {
       name: "Dental Theatre - Main Branch",
       address: "Main Sanoli Road, Marble/Pathar Market Near Chhoker Petrol Pump, Panipat",
-      phone: "+91 98765 43210",
+      phone: "+91 89302 44673",
       hours: "Mon-Sat: 9:30 AM - 7:30 PM, Sun: 9:30 AM - 3:30 PM",
       mapUrl: "https://goo.gl/maps/placeholder1",
     },
     {
       name: "Dental Theatre - City Center",
       address: "GT Road, Near Bus Stand, Panipat, Haryana 132103",
-      phone: "+91 98765 43211",
+      phone: "+91 89302 44673",
       hours: "Mon-Sat: 10:00 AM - 8:00 PM, Sun: 10:00 AM - 2:00 PM",
       mapUrl: "https://goo.gl/maps/placeholder2",
     },
     {
       name: "Dental Theatre - HUDA Section",
       address: "Sector 11-12, HUDA, Panipat, Haryana 132103",
-      phone: "+91 98765 43212",
+      phone: "+91 89302 44673",
       hours: "Mon-Sat: 9:00 AM - 7:00 PM, Sun: Closed",
       mapUrl: "https://goo.gl/maps/placeholder3",
     },
