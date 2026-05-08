@@ -11,55 +11,55 @@ export function CTASection() {
     <section className="py-14 sm:py-20 lg:py-24">
       <div className="container mx-auto max-w-7xl px-5 sm:px-6 lg:px-10">
         <FadeIn direction="up">
-          <div className="relative overflow-hidden rounded-[26px] border border-primary/10 bg-[linear-gradient(135deg,#102f58_0%,#1f5f8e_48%,#5fa9d0_100%)] px-5 py-10 text-primary-foreground shadow-[0_35px_120px_-55px_rgba(8,38,88,0.9)] sm:rounded-[32px] sm:px-8 sm:py-16 md:px-16 md:py-20">
+          <div className="relative overflow-hidden rounded-[26px] border border-white/20 bg-[linear-gradient(145deg,#0a1b38_0%,#154c79_50%,#5499c7_100%)] px-6 py-14 text-center text-white shadow-[0_30px_100px_-30px_rgba(14,46,91,0.6)] sm:rounded-[32px] sm:px-12 sm:py-20 md:py-24">
             <div className="absolute inset-0 pointer-events-none overflow-hidden">
-              <div className="absolute -top-20 -right-20 h-72 w-72 rounded-full bg-white/8 blur-xl" />
-              <div className="absolute -bottom-20 -left-20 h-72 w-72 rounded-full bg-white/6 blur-xl" />
-              <div className="absolute top-1/2 left-1/2 h-[300px] w-[600px] -translate-x-1/2 -translate-y-1/2 rounded-full bg-white/4 blur-2xl" />
-              <svg className="absolute inset-0 h-full w-full opacity-5" xmlns="http://www.w3.org/2000/svg">
+              <div className="absolute left-1/2 top-0 h-[400px] w-[800px] -translate-x-1/2 -translate-y-1/2 rounded-full bg-white/10 blur-[120px]" />
+              <div className="absolute bottom-0 right-0 h-[300px] w-[300px] rounded-full bg-sky-300/20 blur-[100px]" />
+              <svg className="absolute inset-0 h-full w-full opacity-[0.03]" xmlns="http://www.w3.org/2000/svg">
                 <defs>
-                  <pattern id="cta-grid" width="32" height="32" patternUnits="userSpaceOnUse">
-                    <path d="M 32 0 L 0 0 0 32" fill="none" stroke="white" strokeWidth="0.5" />
+                  <pattern id="cta-grid" width="40" height="40" patternUnits="userSpaceOnUse">
+                    <path d="M 40 0 L 0 0 0 40" fill="none" stroke="white" strokeWidth="1" />
                   </pattern>
                 </defs>
                 <rect width="100%" height="100%" fill="url(#cta-grid)" />
               </svg>
             </div>
 
-            <div className="relative z-10 flex flex-col items-center justify-between gap-7 sm:gap-10 lg:flex-row">
-              <div className="max-w-xl text-center lg:text-left">
-                <p className="mb-4 text-[11px] font-bold tracking-[0.3em] text-white/60 uppercase">
-                  Start Today
-                </p>
-                <h2 className="mb-4 font-heading text-[2rem] leading-tight sm:text-4xl md:text-5xl md:leading-none">
-                  Ready for Your Theatrical Transformation?
-                </h2>
-                <p className="text-[14px] leading-[1.75] text-primary-foreground/74 sm:text-[15px] sm:leading-[1.85]">
-                  Book your appointment and take the first step toward a healthier, brighter,
-                  more confident smile with a clinic experience that already feels elevated.
-                </p>
+            <div className="relative z-10 mx-auto flex max-w-5xl flex-col items-center">
+              <div className="mb-4 inline-flex items-center rounded-full border border-white/20 bg-white/10 px-3 py-1.5 text-[10px] font-bold tracking-[0.28em] text-white/90 uppercase backdrop-blur-sm sm:mb-6 sm:px-4 sm:text-[11px]">
+                <span className="mr-2 flex size-1.5 rounded-full bg-sky-300"></span>
+                Start Your Journey
               </div>
+              
+              <h2 className="mb-5 font-heading text-3xl font-extrabold leading-[1.1] tracking-tight sm:text-5xl md:text-[3.5rem] lg:text-[4rem]">
+                Ready for Your Theatrical<br className="hidden sm:block" /> Transformation?
+              </h2>
+              
+              <p className="mb-8 max-w-2xl text-[15px] leading-[1.8] text-white/80 sm:mb-10 sm:text-lg sm:leading-[1.85]">
+                Book your appointment and take the first step toward a healthier, brighter,
+                more confident smile with a clinic experience that feels elevated.
+              </p>
 
-              <div className="flex w-full shrink-0 flex-col gap-3 sm:w-auto sm:flex-row lg:flex-col xl:flex-row">
+              <div className="flex w-full flex-col justify-center gap-4 sm:w-auto sm:flex-row">
                 <Button
                   nativeButton={false}
                   size="lg"
                   variant="secondary"
-                  className="h-12 w-full rounded-xl bg-white px-8 text-sm font-semibold text-primary shadow-md hover:bg-white/90 sm:w-auto"
+                  className="h-14 w-full rounded-2xl bg-white px-8 text-[15px] font-bold text-[#0a1b38] shadow-[0_10px_40px_-10px_rgba(255,255,255,0.3)] transition-all hover:scale-[1.02] hover:bg-slate-50 sm:w-auto sm:px-10"
                   render={<Link href={siteConfig.links.whatsapp} target="_blank" />}
                 >
-                  <MessageSquare className="mr-2 size-4" />
+                  <MessageSquare className="mr-2.5 size-5" />
                   Book via WhatsApp
                 </Button>
                 <Button
                   nativeButton={false}
                   size="lg"
                   variant="outline"
-                  className="h-12 w-full rounded-xl border-white/40 bg-transparent px-8 text-sm font-semibold text-white hover:border-white/70 hover:bg-white/10 sm:w-auto"
+                  className="h-14 w-full rounded-2xl border border-white/30 bg-white/5 px-8 text-[15px] font-bold text-white backdrop-blur-md transition-all hover:scale-[1.02] hover:bg-white/10 sm:w-auto sm:px-10"
                   render={<Link href="/contact" />}
                 >
                   Find Nearest Clinic
-                  <ArrowRight className="ml-2 size-4" />
+                  <ArrowRight className="ml-2.5 size-5" />
                 </Button>
               </div>
             </div>
