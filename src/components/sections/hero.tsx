@@ -63,7 +63,7 @@ export function Hero() {
                     fill
                     className="object-cover object-top"
                     priority
-                    sizes="100vw"
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                   />
                   <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/80 via-black/35 to-transparent px-5 py-6">
                     <p className="text-base font-semibold leading-tight text-white">Dr. Parul Jangra</p>
@@ -95,7 +95,6 @@ export function Hero() {
             </FadeIn>
 
             <FadeIn direction="up" delay={0.28}>
-              <div className="grid gap-3 sm:grid-cols-[1.1fr_0.9fr]">
                 <div className="rounded-[24px] border border-white/70 bg-white/78 p-4 shadow-[0_20px_60px_-40px_rgba(7,33,77,0.55)] backdrop-blur-md sm:rounded-[28px] sm:p-5">
                   <p className="text-[11px] font-bold tracking-[0.28em] text-primary/80 uppercase">
                     Patient Promise
@@ -104,16 +103,6 @@ export function Hero() {
                     Detailed consultations, aesthetic precision, and a treatment environment
                     that feels premium without becoming intimidating.
                   </p>
-                </div>
-                <div className="rounded-[24px] border border-primary/10 bg-[linear-gradient(160deg,rgba(17,53,98,0.96),rgba(40,111,158,0.92))] p-4 text-primary-foreground shadow-[0_22px_70px_-38px_rgba(13,48,101,0.8)] sm:rounded-[28px] sm:p-5">
-                  <p className="text-[11px] font-bold tracking-[0.28em] text-white/60 uppercase">
-                    Reputation
-                  </p>
-                  <p className="mt-3 text-3xl font-semibold leading-none">4.9/5</p>
-                  <p className="mt-2 text-sm leading-[1.75] text-white/72">
-                    Trusted for gentle care, modern treatment planning, and premium results.
-                  </p>
-                </div>
               </div>
             </FadeIn>
 

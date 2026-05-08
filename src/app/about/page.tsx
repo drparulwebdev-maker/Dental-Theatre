@@ -46,6 +46,7 @@ export default function AboutPage() {
                   src="/hero_image.jpeg"
                   alt="Dr. Parul Jangra"
                   fill
+                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                   className="object-cover object-top"
                 />
                 <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/70 via-black/30 to-transparent px-5 py-5 sm:px-6">
