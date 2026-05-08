@@ -9,28 +9,28 @@ import { Award, GraduationCap, Briefcase, CheckCircle2 } from "lucide-react";
 export default function AboutPage() {
   const credentials = [
     {
-      title: "BDS, MDS",
-      description: "Gold Medalist in Oral Surgery",
+      title: "BDS (M.I.D.A)",
+      description: "Reg. no. 009857",
       icon: GraduationCap,
     },
     {
-      title: "12+ Years",
-      description: "Clinical Excellence",
+      title: "Diploma in Oral Surgery",
+      description: "Specialized Surgical Training",
       icon: Briefcase,
     },
     {
-      title: "500+ Implants",
-      description: "Successful Procedures",
+      title: "Implantologist & Aligner Specialist",
+      description: "Advanced Aesthetic Solutions",
       icon: Award,
     },
   ];
 
   const highlights = [
-    "Expert in Painless Root Canal Treatments",
-    "Specialized in Cosmetic Smile Makeovers",
-    "Certified Invisalign Provider",
-    "Member of Indian Dental Association",
-    "Dedicated to Patient-First Approach",
+    "Expert in Oral Surgery and Dental Implants",
+    "Specialized in Invisible Aligners and Smile Design",
+    "Registered Professional with Reg. no. 009857",
+    "Member of Indian Dental Association (M.I.D.A)",
+    "Dedicated to a Patient-First, Theatrical Experience",
   ];
 
   return (
@@ -50,7 +50,7 @@ export default function AboutPage() {
                 />
                 <div className="absolute bottom-0 inset-x-0 bg-gradient-to-t from-black/70 via-black/30 to-transparent px-6 py-5">
                   <p className="text-white font-semibold text-lg">Dr. Parul Jangra</p>
-                  <p className="text-white/65 text-xs mt-0.5 font-light">BDS, MDS · Oral & Dental Surgeon</p>
+                  <p className="text-white/65 text-xs mt-0.5 font-light">BDS (M.I.D.A) · Reg. no. 009857</p>
                 </div>
               </div>
             </FadeIn>
@@ -69,10 +69,10 @@ export default function AboutPage() {
                 </p>
                 <div className="h-px w-14 bg-primary/50 rounded-full mt-5 mb-5" />
                 <p className="text-sm text-muted-foreground leading-relaxed">
-                  Dr. Parul Jangra is a visionary dental surgeon with over a decade of experience in providing comprehensive dental care. Her passion for dentistry goes beyond clinical practice — she views each procedure as an opportunity to restore confidence and health.
+                  Dr. Parul Jangra is a dedicated dental surgeon specializing in Oral Surgery, Implantology, and Aligners. With her background as a BDS (M.I.D.A) and a Diploma in Oral Surgery, she brings technical precision and aesthetic artistry to every procedure.
                 </p>
                 <p className="text-sm text-muted-foreground leading-relaxed mt-3">
-                  She founded Dental Theatre with the mission of making dental visits something patients look forward to, rather than fear. Her "theatrical" approach combines premium aesthetics, advanced technology, and a calming atmosphere.
+                  Registered with the dental council (Reg. no. 009857), Dr. Parul has established Dental Theatre in Panipat as a destination for premium dental care. Her approach combines advanced clinical expertise with a calming, patient-focused environment.
                 </p>
               </FadeIn>
             </div>

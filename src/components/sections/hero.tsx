@@ -149,7 +149,8 @@ export function Hero() {
                 />
                 <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent px-6 py-8">
                   <p className="text-lg leading-tight font-semibold text-white">Dr. Parul Jangra</p>
-                  <p className="mt-1 text-xs font-medium text-white/80">BDS, MDS · Oral & Dental Surgeon</p>
+                  <p className="mt-1 text-xs font-medium text-white/80">BDS (M.I.D.A) · Oral & Dental Surgeon</p>
+                  <p className="mt-0.5 text-[10px] font-medium text-white/60 tracking-wider">Reg. no. 009857</p>
                 </div>
               </div>
 

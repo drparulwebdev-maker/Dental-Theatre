@@ -3,7 +3,6 @@
 import Link from "next/link";
 import * as LucideIcons from "lucide-react";
 import { siteConfig } from "@/lib/data/site-data";
-import { Separator } from "@/components/ui/separator";
 
 export function Footer() {
   const { Facebook, Instagram, Youtube, Mail, Phone, MapPin } = LucideIcons;
@@ -17,7 +16,7 @@ export function Footer() {
       </div>
 
       <div className="container relative mx-auto max-w-7xl px-6 lg:px-10">
-        <div className="grid grid-cols-1 gap-10 pt-14 pb-10 md:grid-cols-2 lg:grid-cols-4">
+        <div className="grid grid-cols-1 gap-10 pt-14 pb-8 md:grid-cols-2 lg:grid-cols-4">
           <div className="flex flex-col gap-4 lg:col-span-1">
             <Link href="/" className="flex items-center">
               <span className="font-heading text-3xl leading-none text-white">
@@ -110,25 +109,17 @@ export function Footer() {
               </div>
               <div className="flex items-center gap-2.5">
                 <Mail className="size-3.5 shrink-0 text-sky-200" />
-                <span className="text-xs text-white/72">contact@dentaltheatre.in</span>
+                <span className="text-xs text-white/72">{siteConfig.email}</span>
               </div>
             </div>
-          </div>
-        </div>
-
-        <Separator className="bg-white/10" />
-
-        <div className="flex flex-col items-center justify-between gap-3 py-6 md:flex-row">
-          <p className="text-[11px] text-white/45">
-            © {new Date().getFullYear()} Dental Theatre. All rights reserved.
-          </p>
-          <div className="flex gap-5">
-            <Link href="/privacy" className="text-[11px] text-white/45 transition-colors hover:text-white">
-              Privacy Policy
-            </Link>
-            <Link href="/terms" className="text-[11px] text-white/45 transition-colors hover:text-white">
-              Terms of Service
-            </Link>
+            <div className="mt-5 border-t border-white/5 pt-4">
+              <p className="text-[10px] font-medium tracking-wider text-white/40 uppercase">
+                Dr. Parul Jangra
+              </p>
+              <p className="mt-1 text-[10px] text-white/30">
+                Reg. no. 009857
+              </p>
+            </div>
           </div>
         </div>
       </div>

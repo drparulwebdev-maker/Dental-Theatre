@@ -40,3 +40,11 @@
 <li>Fixed teeth</li>
 <li>Tongue tie treatment</li>
 </ol>
+
+> Location
+
+Main Sanoli Road, Marble/Pathar Market Near Chhoker Petrol Pump, Panipat
+
+> Number
+
+89300-10599

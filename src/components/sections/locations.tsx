@@ -14,10 +14,11 @@ const extendedLocations = [
     ...siteConfig.locations[0],
     shortName: "Main Branch",
     doctor: "Dr. Parul Jangra",
-    doctorRole: "Lead Prosthodontist",
-    doctorTags: ["Smile Design", "Implants", "12+ Yrs Exp"],
+    doctorRole: "Implantologist & Aligner Specialist",
+    doctorTags: ["Smile Design", "Implants", "Oral Surgery"],
+    regNo: "009857",
     image: "bg-[linear-gradient(135deg,#0f2f5e_0%,#1c6aa1_48%,#93d8f5_100%)]",
-    mapEmbed: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d111551.99264671043!2d76.9712!3d29.3909!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390ddb0507a213e1%3A0xcb1b590e89cb79e0!2sPanipat%2C%20Haryana!5e0!3m2!1sen!2sin!4v1715000000000!5m2!1sen!2sin",
+    mapEmbed: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d13905.565347388138!2d76.96347470111633!3d29.388106029308222!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390ddbe4b5af9bb1%3A0x61671b9b559b5bbd!2sDr%20Duhan%20and%20Dr%20Parul%27s%20Dental%20Theatre%20-%20Sanoli%20Road%20Panipat!5e0!3m2!1sen!2sin!4v1778243719107!5m2!1sen!2sin",
   },
   {
     ...siteConfig.locations[1],
@@ -121,6 +122,11 @@ export function LocationsSection({ id }: { id?: string }) {
                       <div>
                         <p className="text-lg font-bold text-foreground">{activeLocation.doctor}</p>
                         <p className="text-sm font-medium text-primary">{activeLocation.doctorRole}</p>
+                        {"regNo" in activeLocation && (
+                          <p className="mt-0.5 text-[10px] text-muted-foreground uppercase tracking-wider">
+                            Reg. no. {activeLocation.regNo}
+                          </p>
+                        )}
                       </div>
                     </div>
                     
