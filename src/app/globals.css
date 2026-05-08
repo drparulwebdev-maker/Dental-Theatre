@@ -149,7 +149,7 @@
   }
 
   html {
-    @apply font-sans scroll-smooth;
+    @apply font-sans scroll-smooth bg-background;
   }
 
   h1,
@@ -190,4 +190,39 @@
   ::selection {
     background: color-mix(in oklab, var(--primary) 22%, white);
   }
+}
+
+/* Custom Pill Scrollbar */
+html,
+body,
+* {
+  scrollbar-width: thin;
+  scrollbar-color: rgba(22, 74, 133, 0.34) transparent;
+}
+
+::-webkit-scrollbar {
+  width: 12px;
+  height: 12px;
+  background-color: transparent !important;
+}
+
+::-webkit-scrollbar-track,
+::-webkit-scrollbar-track-piece,
+::-webkit-scrollbar-corner,
+::-webkit-scrollbar-button {
+  background: transparent !important;
+  border: 0 !important;
+  box-shadow: none !important;
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 999px;
+  border: 3px solid transparent;
+  background-color: rgba(22, 74, 133, 0.34);
+  background-clip: padding-box;
+  box-shadow: none;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: rgba(22, 74, 133, 0.48);
 }
