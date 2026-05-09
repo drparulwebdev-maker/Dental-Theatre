@@ -62,7 +62,7 @@ export function Footer() {
                 { label: "Our Services", href: "/services" },
                 { label: "Smile Gallery", href: "/gallery" },
                 { label: "Patient Stories", href: "/testimonials" },
-                { label: "Contact Us", href: "/contact" },
+                { label: "Contact Us", href: "#locations" },
               ].map((link) => (
                 <Link
                   key={link.href}
