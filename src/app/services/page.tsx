@@ -6,7 +6,7 @@ import { Card, CardContent } from "@/components/ui/card";
 import * as LucideIcons from "lucide-react";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
-import { MessageSquare, ArrowRight } from "lucide-react";
+import { MessageSquare, ArrowRight, PhoneCall } from "lucide-react";
 
 export default function ServicesPage() {
   // Group services by category
@@ -123,7 +123,7 @@ export default function ServicesPage() {
             <h2 className="mb-5 text-[2rem] font-extrabold leading-tight tracking-tight md:text-4xl lg:mb-6 lg:text-5xl">
               Not sure which treatment is right for you?
             </h2>
-            <p className="mx-auto mb-8 max-w-2xl text-[14px] leading-[1.75] text-white/80 sm:mb-10 sm:text-[16px] sm:leading-relaxed">
+            <p className="mx-auto mb-8 hidden max-w-2xl text-[14px] leading-[1.75] text-white/80 sm:mb-10 sm:block sm:text-[16px] sm:leading-relaxed">
               Every smile is unique. Schedule a comprehensive check-up with Dr. Parul to discuss your goals, explore your options, and create a highly personalised treatment plan.
             </p>
             <div className="flex flex-col items-center justify-center gap-4 sm:flex-row">
@@ -143,9 +143,10 @@ export default function ServicesPage() {
                 size="lg"
                 variant="outline"
                 className="h-12 w-full rounded-xl border-white/20 bg-white/5 px-7 text-sm font-bold text-white hover:bg-white/10 hover:text-white sm:h-14 sm:w-auto sm:px-8 sm:text-[15px]"
-                render={<Link href="/contact" />}
+                render={<a href="tel:+918930244673" />}
               >
-                Find Nearest Clinic
+                <PhoneCall className="mr-2.5 size-5" />
+                Call Us
               </Button>
             </div>
           </FadeIn>

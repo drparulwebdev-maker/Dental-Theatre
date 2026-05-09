@@ -28,7 +28,7 @@ export default function GalleryPage() {
   return (
     <div className="flex w-full flex-col">
       {/* Page hero */}
-      <section className="border-b border-border/40 bg-muted/20 py-12 sm:py-14 lg:py-16">
+      <section className="border-b border-border/40 bg-muted/20 pt-10 pb-5 sm:py-14 lg:py-16">
         <div className="container mx-auto max-w-7xl px-5 text-center sm:px-6 lg:px-10">
           <FadeIn direction="up">
             <p className="text-[11px] font-semibold tracking-widest uppercase text-primary mb-3">
@@ -43,11 +43,20 @@ export default function GalleryPage() {
       </section>
 
       {/* Gallery */}
-      <section className="py-12 sm:py-16 lg:py-20">
+      <section className="pt-2 pb-12 sm:py-16 lg:py-20">
         <div className="container mx-auto max-w-7xl px-5 sm:px-6 lg:px-10">
           {/* Category filters */}
           <FadeIn direction="up" delay={0.1}>
-            <div className="-mx-5 mb-8 flex gap-2 overflow-x-auto px-5 pb-2 sm:mx-0 sm:mb-10 sm:flex-wrap sm:justify-center sm:overflow-visible sm:px-0 sm:pb-0">
+            <div 
+              className="-mx-5 mb-8 flex gap-2 overflow-x-auto px-5 pb-2.5 sm:mx-0 sm:mb-10 sm:flex-wrap sm:justify-center sm:overflow-visible sm:px-0 sm:pb-0"
+              style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}
+            >
+              {/* For Webkit browsers (Chrome, Safari, Edge) */}
+              <style dangerouslySetInnerHTML={{ __html: `
+                .overflow-x-auto::-webkit-scrollbar {
+                  display: none;
+                }
+              ` }} />
               {categories.map((category) => (
                 <button
                   key={category}

@@ -1,6 +1,6 @@
 "use client";
 
-import { ArrowRight, MessageSquare } from "lucide-react";
+import { ArrowRight, MessageSquare, PhoneCall } from "lucide-react";
 import Link from "next/link";
 import { siteConfig } from "@/lib/data/site-data";
 import { FadeIn } from "@/components/ui-custom/animations";
@@ -35,9 +35,9 @@ export function CTASection() {
                 Ready for Your Theatrical<br className="hidden sm:block" /> Transformation?
               </h2>
               
-              <p className="mb-8 max-w-2xl text-[15px] leading-[1.8] text-white/80 sm:mb-10 sm:text-lg sm:leading-[1.85]">
+              <p className="mb-8 hidden max-w-2xl text-[15px] leading-[1.8] text-white/80 sm:mb-10 sm:block sm:text-lg sm:leading-[1.85]">
                 Book your appointment and take the first step toward a healthier, brighter,
-                more confident smile with a clinic experience that feels elevated.
+                more confident smile with a clinic experience that already feels elevated.
               </p>
 
               <div className="flex w-full flex-col justify-center gap-4 sm:w-auto sm:flex-row">
@@ -56,10 +56,10 @@ export function CTASection() {
                   size="lg"
                   variant="outline"
                   className="h-14 w-full rounded-2xl border border-white/30 bg-white/5 px-8 text-[15px] font-bold text-white backdrop-blur-md transition-all hover:scale-[1.02] hover:bg-white/10 sm:w-auto sm:px-10"
-                  render={<Link href="/contact" />}
+                  render={<a href="tel:+918930244673" />}
                 >
-                  Find Nearest Clinic
-                  <ArrowRight className="ml-2.5 size-5" />
+                  <PhoneCall className="mr-2.5 size-5" />
+                  Call Us
                 </Button>
               </div>
             </div>

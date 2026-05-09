@@ -57,64 +57,55 @@ export function LocationsSection({ id }: { id?: string }) {
           </h2>
         </FadeIn>
 
-        <div className="grid grid-cols-1 items-start gap-9 sm:gap-12 lg:grid-cols-2 lg:items-center lg:gap-16">
-          
-          {/* Left Side: Info & Controls */}
-          <div className="flex flex-col">
-            
-            {/* Location Switcher */}
-            <FadeIn direction="up" delay={0.1}>
-              <div className="-mx-5 mb-7 flex gap-2 overflow-x-auto px-5 pb-2 sm:mx-0 sm:mb-8 sm:w-fit sm:flex-wrap sm:overflow-visible sm:rounded-2xl sm:border sm:border-border/50 sm:bg-slate-100/50 sm:p-1.5">
-                {extendedLocations.map((loc, idx) => (
-                  <button
-                    key={loc.shortName}
-                    onClick={() => setActiveIndex(idx)}
-                    className={cn(
-                      "shrink-0 rounded-xl px-4 py-2.5 text-sm font-semibold transition-all duration-300 sm:px-5",
-                      activeIndex === idx
-                        ? "bg-white text-primary shadow-sm ring-1 ring-border/50"
-                        : "text-muted-foreground hover:text-foreground hover:bg-slate-100"
-                    )}
-                  >
-                    {loc.shortName}
-                  </button>
-                ))}
-              </div>
-            </FadeIn>
-
-            <div className="min-h-0 lg:min-h-[380px]">
-              <AnimatePresence mode="wait">
-                <motion.div
-                  key={activeIndex}
-                  initial={{ opacity: 0, y: 10 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  exit={{ opacity: 0, y: -10 }}
-                  transition={{ duration: 0.3 }}
-                  className="flex flex-col gap-6 sm:gap-8"
+        <div className="flex flex-col">
+          {/* Location Switcher */}
+          <FadeIn direction="up" delay={0.1}>
+            <div 
+              className="mb-7 flex w-full gap-2 overflow-x-auto rounded-2xl border border-border/50 bg-slate-100/50 p-2 sm:mb-8 sm:w-fit sm:flex-wrap sm:overflow-visible sm:p-1.5"
+              style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}
+            >
+              {/* For Webkit browsers (Chrome, Safari, Edge) */}
+              <style dangerouslySetInnerHTML={{ __html: `
+                .overflow-x-auto::-webkit-scrollbar {
+                  display: none;
+                }
+              ` }} />
+              {extendedLocations.map((loc, idx) => (
+                <button
+                  key={loc.shortName}
+                  onClick={() => setActiveIndex(idx)}
+                  className={cn(
+                    "shrink-0 rounded-xl px-4 py-2.5 text-sm font-semibold transition-all duration-300 sm:px-5",
+                    activeIndex === idx
+                      ? "bg-white text-primary shadow-sm ring-1 ring-border/50"
+                      : "text-muted-foreground hover:text-foreground hover:bg-slate-100"
+                  )}
                 >
-                  
-                  {/* Location Info */}
-                  <div className="space-y-4">
-                    <h3 className="text-[1.45rem] font-bold leading-tight sm:text-2xl">{activeLocation.name}</h3>
-                    
-                    <div className="space-y-3 text-muted-foreground">
-                      <div className="flex items-start gap-3">
-                        <MapPin className="size-5 shrink-0 text-primary mt-0.5" />
-                        <p className="text-[14px] leading-relaxed sm:text-[15px]">{activeLocation.address}</p>
-                      </div>
-                      <div className="flex items-center gap-3">
-                        <Phone className="size-5 shrink-0 text-primary" />
-                        <p className="text-[14px] sm:text-[15px]">{activeLocation.phone}</p>
-                      </div>
-                      <div className="flex items-start gap-3">
-                        <Clock className="size-5 shrink-0 text-primary mt-0.5" />
-                        <p className="text-[14px] leading-relaxed sm:text-[15px]">{activeLocation.hours}</p>
-                      </div>
-                    </div>
-                  </div>
+                  {loc.shortName}
+                </button>
+              ))}
+              {/* Invisible spacer to ensure the last button has padding at the end of scroll */}
+              <div className="w-4 shrink-0 sm:hidden" aria-hidden="true" />
+            </div>
+          </FadeIn>
 
-                  {/* Doctor Profile */}
-                  <div className="rounded-[22px] border border-primary/10 bg-slate-50/80 p-5 shadow-sm sm:rounded-[24px] sm:p-6">
+          <div className="min-h-0">
+            <AnimatePresence mode="wait">
+              <motion.div
+                key={activeIndex}
+                initial={{ opacity: 0, y: 10 }}
+                animate={{ opacity: 1, y: 0 }}
+                exit={{ opacity: 0, y: -10 }}
+                transition={{ duration: 0.3 }}
+                className="grid grid-cols-1 gap-9 sm:gap-12 lg:grid-cols-2 lg:items-center lg:gap-16"
+              >
+                {/* Left side on desktop, Reordered on mobile */}
+                <div className="flex flex-col gap-6 sm:gap-8 lg:col-start-1">
+                  {/* Clinic Name - Order 1 mobile */}
+                  <h3 className="order-1 text-[1.45rem] font-bold leading-tight sm:text-2xl">{activeLocation.name}</h3>
+
+                  {/* Doctor Profile - Order 2 mobile */}
+                  <div className="order-2 rounded-[22px] border border-primary/10 bg-slate-50/80 p-5 shadow-sm sm:rounded-[24px] sm:p-6">
                     <div className="mb-4 flex items-center gap-3 sm:gap-4">
                       <div className="flex size-12 shrink-0 items-center justify-center rounded-full bg-primary/10 text-primary sm:size-14">
                         <User className="size-5 sm:size-6" />
@@ -142,8 +133,47 @@ export function LocationsSection({ id }: { id?: string }) {
                     </div>
                   </div>
 
-                  {/* CTA */}
-                  <div className="grid gap-3 sm:flex sm:flex-wrap">
+                  {/* Desktop dummy spacer for Image/Map column on mobile */}
+                  <div className="order-3 block lg:hidden">
+                    <div className="relative h-[360px] w-full overflow-hidden rounded-[26px] shadow-2xl shadow-primary/10 ring-1 ring-border/50 sm:h-[430px] sm:rounded-[32px]">
+                       <div className={cn("absolute inset-0 transition-colors duration-500", activeLocation.image)}>
+                        <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(255,255,255,0.2),transparent_50%)]" />
+                        <div className="absolute inset-0 flex items-center justify-center">
+                           <p className="text-white/60 tracking-widest uppercase text-sm font-semibold">Clinic Interior</p>
+                        </div>
+                      </div>
+
+                      <div className="absolute right-4 bottom-4 left-4 h-[38%] overflow-hidden rounded-2xl bg-white shadow-2xl ring-4 ring-white/20 sm:left-auto sm:right-6 sm:bottom-6 sm:h-[30%] sm:min-h-[160px] sm:w-[35%] sm:min-w-[200px]">
+                        <iframe
+                          src={activeLocation.mapEmbed}
+                          className="w-full h-full border-0"
+                          allowFullScreen={false}
+                          loading="lazy"
+                          referrerPolicy="no-referrer-when-downgrade"
+                        />
+                        <div className="absolute inset-0 pointer-events-none ring-1 ring-inset ring-black/10 rounded-2xl" />
+                      </div>
+                    </div>
+                  </div>
+
+                  {/* Info Text - Order 4 mobile */}
+                  <div className="order-4 space-y-3 text-muted-foreground">
+                    <div className="flex items-start gap-3">
+                      <MapPin className="size-5 shrink-0 text-primary mt-0.5" />
+                      <p className="text-[14px] leading-relaxed sm:text-[15px]">{activeLocation.address}</p>
+                    </div>
+                    <div className="flex items-center gap-3">
+                      <Phone className="size-5 shrink-0 text-primary" />
+                      <p className="text-[14px] sm:text-[15px]">{activeLocation.phone}</p>
+                    </div>
+                    <div className="flex items-start gap-3">
+                      <Clock className="size-5 shrink-0 text-primary mt-0.5" />
+                      <p className="text-[14px] leading-relaxed sm:text-[15px]">{activeLocation.hours}</p>
+                    </div>
+                  </div>
+
+                  {/* CTA Buttons - Order 5 mobile */}
+                  <div className="order-5 grid gap-3 sm:flex sm:flex-wrap">
                     <Button
                       nativeButton={false}
                       size="lg"
@@ -164,62 +194,33 @@ export function LocationsSection({ id }: { id?: string }) {
                       <ExternalLink className="ml-2 size-4" />
                     </Button>
                   </div>
+                </div>
 
-                </motion.div>
-              </AnimatePresence>
-            </div>
-          </div>
+                {/* Right side on desktop, Hidden on mobile (handled above) */}
+                <div className="hidden lg:block lg:col-start-2">
+                  <div className="relative h-[360px] w-full overflow-hidden rounded-[26px] shadow-2xl shadow-primary/10 ring-1 ring-border/50 sm:h-[430px] sm:rounded-[32px] lg:h-[500px]">
+                    <div className={cn("absolute inset-0 transition-colors duration-500", activeLocation.image)}>
+                      <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(255,255,255,0.2),transparent_50%)]" />
+                      <div className="absolute inset-0 flex items-center justify-center">
+                         <p className="text-white/60 tracking-widest uppercase text-sm font-semibold">Clinic Interior</p>
+                      </div>
+                    </div>
 
-          {/* Right Side: Image & Map Overlay */}
-          <FadeIn direction="left" delay={0.2} className="h-full">
-            <div className="relative h-[360px] w-full overflow-hidden rounded-[26px] shadow-2xl shadow-primary/10 ring-1 ring-border/50 sm:h-[430px] sm:rounded-[32px] lg:h-[500px]">
-              
-              {/* Abstract/Placeholder Image */}
-              <AnimatePresence mode="wait">
-                <motion.div
-                  key={activeIndex}
-                  initial={{ opacity: 0 }}
-                  animate={{ opacity: 1 }}
-                  exit={{ opacity: 0 }}
-                  transition={{ duration: 0.5 }}
-                  className={cn("absolute inset-0 transition-colors duration-500", activeLocation.image)}
-                >
-                  <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(255,255,255,0.2),transparent_50%)]" />
-                  <div className="absolute inset-0 flex items-center justify-center">
-                     <p className="text-white/60 tracking-widest uppercase text-sm font-semibold">Clinic Interior</p>
+                    <div className="absolute right-4 bottom-4 left-4 h-[38%] overflow-hidden rounded-2xl bg-white shadow-2xl ring-4 ring-white/20 sm:left-auto sm:right-6 sm:bottom-6 sm:h-[30%] sm:min-h-[160px] sm:w-[35%] sm:min-w-[200px]">
+                      <iframe
+                        src={activeLocation.mapEmbed}
+                        className="w-full h-full border-0"
+                        allowFullScreen={false}
+                        loading="lazy"
+                        referrerPolicy="no-referrer-when-downgrade"
+                      />
+                      <div className="absolute inset-0 pointer-events-none ring-1 ring-inset ring-black/10 rounded-2xl" />
+                    </div>
                   </div>
-                </motion.div>
-              </AnimatePresence>
-
-              {/* Interactive Map Widget Overlay */}
-              <motion.div 
-                className="absolute right-4 bottom-4 left-4 h-[38%] overflow-hidden rounded-2xl bg-white shadow-2xl ring-4 ring-white/20 sm:left-auto sm:right-6 sm:bottom-6 sm:h-[30%] sm:min-h-[160px] sm:w-[35%] sm:min-w-[200px]"
-                initial={{ y: 20, opacity: 0 }}
-                animate={{ y: 0, opacity: 1 }}
-                transition={{ delay: 0.4, type: "spring", stiffness: 200, damping: 20 }}
-              >
-                <AnimatePresence mode="wait">
-                  <motion.iframe
-                    key={activeIndex}
-                    initial={{ opacity: 0 }}
-                    animate={{ opacity: 1 }}
-                    exit={{ opacity: 0 }}
-                    transition={{ duration: 0.3 }}
-                    src={activeLocation.mapEmbed}
-                    className="w-full h-full border-0"
-                    allowFullScreen={false}
-                    loading="lazy"
-                    referrerPolicy="no-referrer-when-downgrade"
-                  />
-                </AnimatePresence>
-                
-                {/* Subtle gradient to blend map edges if needed */}
-                <div className="absolute inset-0 pointer-events-none ring-1 ring-inset ring-black/10 rounded-2xl" />
+                </div>
               </motion.div>
-
-            </div>
-          </FadeIn>
-
+            </AnimatePresence>
+          </div>
         </div>
       </div>
     </section>

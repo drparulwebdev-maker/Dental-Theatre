@@ -27,7 +27,7 @@ export function PhotoGridSection() {
             homepage a stronger editorial rhythm until real clinic photography is ready.
           </p>
 
-          <div className="mt-6 grid gap-3 sm:mt-8 sm:grid-cols-2 sm:gap-4">
+          <div className="mt-6 hidden gap-3 sm:mt-8 sm:grid sm:grid-cols-2 sm:gap-4">
             {siteConfig.galleryHighlights.slice(0, 2).map((item) => (
               <div
                 key={item.title}

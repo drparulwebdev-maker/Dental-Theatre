@@ -15,7 +15,7 @@ import {
   navigationMenuTriggerStyle,
 } from "@/components/ui/navigation-menu";
 import { Sheet, SheetContent, SheetTrigger, SheetTitle, SheetHeader, SheetFooter } from "@/components/ui/sheet";
-import { Menu, Phone, MessageSquare, Home, Info, Stethoscope, Image, Mail, Instagram, Facebook } from "lucide-react";
+import { Menu, Phone, MessageSquare, Home, Info, Stethoscope, Image, Mail, Instagram, Facebook, Youtube } from "lucide-react";
 import { siteConfig } from "@/lib/data/site-data";
 
 const navItems = [
@@ -145,6 +145,9 @@ export function Header() {
                     </Link>
                     <Link href={siteConfig.links.facebook} target="_blank" className="p-2 rounded-full bg-background border border-border/60 text-muted-foreground hover:text-primary hover:border-primary/40 transition-all">
                       <Facebook className="size-4" />
+                    </Link>
+                    <Link href={siteConfig.links.youtube} target="_blank" className="p-2 rounded-full bg-background border border-border/60 text-muted-foreground hover:text-primary hover:border-primary/40 transition-all">
+                      <Youtube className="size-4" />
                     </Link>
                   </div>
                 </div>
