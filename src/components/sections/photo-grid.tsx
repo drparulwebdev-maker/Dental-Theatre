@@ -23,8 +23,7 @@ export function PhotoGridSection() {
             A calmer, more elevated treatment experience.
           </h2>
           <p className="mt-4 max-w-xl text-[14px] leading-[1.75] text-muted-foreground sm:mt-5 sm:text-[15px] sm:leading-[1.85]">
-            This asymmetrical grid acts as a premium placeholder gallery for now, giving the
-            homepage a stronger editorial rhythm until real clinic photography is ready.
+            Discover the serene and modern environment of our dental clinic, where advanced technology and compassionate care come together to create a calming treatment experience.
           </p>
 
           <div className="mt-6 hidden gap-3 sm:mt-8 sm:grid sm:grid-cols-2 sm:gap-4">

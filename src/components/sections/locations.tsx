@@ -48,7 +48,7 @@ export function LocationsSection({ id }: { id?: string }) {
     <section id={id} className="relative overflow-hidden bg-white py-12 sm:py-16 lg:py-24">
       <div className="container mx-auto max-w-7xl px-5 sm:px-6 lg:px-10">
         
-        <FadeIn direction="up" className="mb-8 text-center sm:mb-10 lg:text-left">
+        <FadeIn direction="up" className="mb-4 sm:mb-6 text-center lg:text-left">
           <p className="mb-3 text-[11px] font-bold tracking-[0.3em] text-primary uppercase">
             Our Clinics
           </p>
@@ -61,7 +61,7 @@ export function LocationsSection({ id }: { id?: string }) {
           {/* Location Switcher */}
           <FadeIn direction="up" delay={0.1}>
             <div 
-              className="mb-7 flex w-full gap-2 overflow-x-auto rounded-2xl border border-border/50 bg-slate-100/50 p-2 sm:mb-8 sm:w-fit sm:flex-wrap sm:overflow-visible sm:p-1.5"
+              className="mb-4 flex w-full gap-2 overflow-x-auto rounded-2xl border border-border/50 bg-slate-100/50 p-2 sm:mb-5 sm:w-fit sm:flex-wrap sm:overflow-visible sm:p-1.5"
               style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}
             >
               {/* For Webkit browsers (Chrome, Safari, Edge) */}
