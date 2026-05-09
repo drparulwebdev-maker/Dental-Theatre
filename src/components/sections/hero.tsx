@@ -4,207 +4,223 @@ import { motion } from "framer-motion";
 import {
   ArrowRight,
   MessageSquare,
-  PhoneCall,
   ShieldCheck,
   Star,
+  Users,
+  CalendarCheck,
+  MapPin,
+  ChevronDown,
 } from "lucide-react";
 import Link from "next/link";
 import Image from "next/image";
 import { siteConfig } from "@/lib/data/site-data";
 import { FadeIn } from "@/components/ui-custom/animations";
 import { Counter } from "@/components/ui-custom/counter";
-import { Button } from "@/components/ui/button";
+
+const stats = [
+  { value: 10, suffix: "k+", label: "Happy Patients", icon: Users },
+  { value: 12, suffix: "+", label: "Years Experience", icon: CalendarCheck },
+  { value: 4.9, suffix: "", label: "Google Rating", icon: Star, decimals: 1 },
+  { value: 3, suffix: "", label: "Clinic Locations", icon: MapPin },
+];
 
 export function Hero() {
   return (
-    <section className="relative overflow-hidden pt-8 pb-14 sm:pt-10 sm:pb-16 lg:pt-16 lg:pb-24">
-      <div className="absolute inset-0 -z-10 pointer-events-none">
-        <div className="absolute inset-x-0 top-0 h-[520px] bg-[linear-gradient(180deg,rgba(14,46,91,0.08),transparent)]" />
-        <div className="absolute -top-32 right-[-7rem] h-[600px] w-[600px] rounded-full bg-primary/12 blur-[120px]" />
-        <div className="absolute bottom-0 left-[-6rem] h-[420px] w-[420px] rounded-full bg-sky-200/40 blur-[120px]" />
-        <div className="absolute inset-0 opacity-30 [background-image:linear-gradient(rgba(19,74,123,0.06)_1px,transparent_1px),linear-gradient(90deg,rgba(19,74,123,0.04)_1px,transparent_1px)] [background-size:72px_72px]" />
+    <section className="relative min-h-[100svh] flex flex-col overflow-hidden">
+
+      {/* ══════════════════════════════════════════
+          FULL-BLEED BACKGROUND IMAGE
+      ══════════════════════════════════════════ */}
+      <div className="absolute inset-0 -z-10">
+        <Image
+          src="/dental_bg.jpg"
+          alt="Dental Theatre — Modern Clinic Interior"
+          fill
+          priority
+          className="object-cover object-center"
+          sizes="100vw"
+          quality={90}
+        />
+
+        {/* Deep cinematic overlay — dark at top/bottom, slightly lifted in the centre */}
+        <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(4,15,35,0.78)_0%,rgba(4,15,35,0.52)_40%,rgba(4,15,35,0.60)_70%,rgba(4,15,35,0.90)_100%)]" />
+
+        {/* Subtle blue tint that matches the brand */}
+        <div className="absolute inset-0 bg-[oklch(0.22_0.09_244/0.28)] mix-blend-multiply" />
+
+        {/* Vignette ring */}
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_80%_60%_at_50%_50%,transparent_30%,rgba(2,8,23,0.55)_100%)]" />
       </div>
 
-      <div className="container mx-auto max-w-7xl px-5 sm:px-6 lg:px-10">
-        <div className="grid grid-cols-1 items-center gap-10 sm:gap-12 lg:grid-cols-2 lg:gap-16">
-          <div className="flex flex-col gap-5 lg:-mt-30 sm:gap-6">
-            <FadeIn direction="up">
-              <div className="inline-flex w-fit max-w-full items-center gap-2 rounded-full border border-primary/15 bg-primary/8 px-3.5 py-1.5 text-[10px] font-bold tracking-[0.2em] text-primary uppercase sm:text-[11px] sm:tracking-[0.28em]">
-                <ShieldCheck className="size-3" />
-                <span className="truncate">Most Trusted Dental Clinic in Panipat</span>
-              </div>
-              <h1 className="mt-4 text-[2.6rem] font-extrabold leading-[1.04] tracking-tight text-foreground sm:mt-5 sm:text-4xl md:text-[2.75rem] lg:text-5xl lg:leading-[1.08]">
-                Where Science Meets<br className="hidden md:block" /> the{" "}
-                <span className="text-primary underline decoration-primary/35 decoration-wavy underline-offset-4">
-                  Art of Smiles.
-                </span>
-              </h1>
-            </FadeIn>
+      {/* ══════════════════════════════════════════
+          MAIN CONTENT — centred column
+      ══════════════════════════════════════════ */}
+      <div className="relative z-10 flex flex-1 flex-col items-center justify-center text-center px-5 sm:px-8 pt-28 pb-36 sm:pt-32 sm:pb-40 lg:pt-36 lg:pb-44">
 
-            <FadeIn direction="up" delay={0.1}>
-              <div className="flex flex-wrap gap-2">
-                {["Smile Design", "Implants", "Invisible Aligners"].map((item) => (
-                  <span
-                    key={item}
-                    className="rounded-full border border-border/70 bg-white/75 px-3 py-1 text-xs font-medium text-foreground/72 shadow-sm backdrop-blur-sm"
-                  >
-                    {item}
-                  </span>
-                ))}
-              </div>
-            </FadeIn>
-
-            <FadeIn direction="up" delay={0.14} className="lg:hidden">
-              <div className="relative mx-auto w-full max-w-[26rem] overflow-visible px-1 pb-5 pt-2">
-                <div className="relative aspect-[4/5] overflow-hidden rounded-[28px] bg-muted/20 shadow-2xl shadow-primary/10 ring-1 ring-border/50">
-                  <Image
-                    src="/hero_image.jpeg"
-                    alt="Dr. Parul Jangra"
-                    fill
-                    className="object-cover object-top"
-                    priority
-                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-                  />
-                  <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/80 via-black/35 to-transparent px-5 py-6">
-                    <p className="text-base font-semibold leading-tight text-white">Dr. Parul Jangra</p>
-                    <p className="mt-1 text-[11px] font-medium text-white/78">BDS (M.I.D.A) · Oral & Dental Surgeon</p>
-                    <p className="mt-0.5 text-[10px] font-medium tracking-wider text-white/58">Reg. no. 009857</p>
-                  </div>
-                </div>
-
-                <div className="absolute right-0 top-0 rounded-[20px] border border-white/70 bg-white/92 px-3 py-2 shadow-xl">
-                  <div className="flex items-center gap-2">
-                    <div className="rounded-xl bg-amber-50 p-1.5">
-                      <Star className="size-3.5 fill-yellow-500 text-yellow-500" />
-                    </div>
-                    <div>
-                      <p className="text-xs font-bold leading-none">4.9 / 5.0</p>
-                      <p className="mt-1 text-[10px] text-muted-foreground">Google Reviews</p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </FadeIn>
-
-            <FadeIn direction="up" delay={0.18}>
-              <p className="max-w-[560px] text-[15px] leading-[1.75] text-muted-foreground md:text-base md:leading-[1.85]">
-                Dental Theatre combines advanced clinical care with a calmer, more polished
-                patient experience, so every consultation, treatment plan, and smile makeover
-                feels precise, personal, and confidence-building.
-              </p>
-            </FadeIn>
-
-            <FadeIn direction="up" delay={0.28}>
-                <div className="rounded-[24px] border border-white/70 bg-white/78 p-4 shadow-[0_20px_60px_-40px_rgba(7,33,77,0.55)] backdrop-blur-md sm:rounded-[28px] sm:p-5">
-                  <p className="text-[11px] font-bold tracking-[0.28em] text-primary/80 uppercase">
-                    Patient Promise
-                  </p>
-                  <p className="mt-3 text-sm leading-[1.8] text-muted-foreground">
-                    Detailed consultations, aesthetic precision, and a treatment environment
-                    that feels premium without becoming intimidating.
-                  </p>
-              </div>
-            </FadeIn>
-
-            <FadeIn direction="up" delay={0.34}>
-              <div className="flex flex-col gap-3 sm:flex-row">
-                <Button
-                  nativeButton={false}
-                  size="lg"
-                  className="h-12 w-full rounded-xl px-7 text-sm font-semibold shadow-md shadow-primary/20 sm:w-auto"
-                  render={<Link href={siteConfig.links.whatsapp} target="_blank" />}
-                >
-                  <MessageSquare className="mr-2 size-4" />
-                  Book Appointment
-                </Button>
-                <Button
-                  nativeButton={false}
-                  size="lg"
-                  variant="outline"
-                  className="h-12 w-full rounded-xl border-border/70 bg-white/65 px-7 text-sm backdrop-blur-sm hover:bg-white sm:w-auto"
-                  render={<Link href="/services" />}
-                >
-                  Explore Services
-                  <ArrowRight className="ml-2 size-4" />
-                </Button>
-              </div>
-            </FadeIn>
-
-            <FadeIn direction="up" delay={0.45}>
-              <div className="mt-2 grid grid-cols-3 gap-3 border-t border-border/50 pt-5 sm:flex sm:items-start sm:gap-6 sm:pt-6">
-                <div>
-                  <p className="text-[1.55rem] font-bold tracking-tight sm:text-2xl">
-                    <Counter value={10} suffix="k+" />
-                  </p>
-                  <p className="mt-1 text-[11px] font-medium leading-tight text-muted-foreground sm:mt-0.5 sm:text-xs">Happy Patients</p>
-                </div>
-                <div className="hidden h-10 w-px self-center bg-border sm:block" />
-                <div className="border-l border-border pl-3 sm:border-l-0 sm:pl-0">
-                  <p className="text-[1.55rem] font-bold tracking-tight sm:text-2xl">
-                    <Counter value={12} suffix="+" />
-                  </p>
-                  <p className="mt-1 text-[11px] font-medium leading-tight text-muted-foreground sm:mt-0.5 sm:text-xs">Years Experience</p>
-                </div>
-                <div className="hidden h-10 w-px self-center bg-border sm:block" />
-                <div className="border-l border-border pl-3 sm:border-l-0 sm:pl-0">
-                  <p className="text-[1.55rem] font-bold tracking-tight sm:text-2xl">
-                    <Counter value={3} />
-                  </p>
-                  <p className="mt-1 text-[11px] font-medium leading-tight text-muted-foreground sm:mt-0.5 sm:text-xs">Clinic Locations</p>
-                </div>
-              </div>
-            </FadeIn>
+        {/* ── Eyebrow badge ── */}
+        <FadeIn direction="up">
+          <div className="inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/10 px-4 py-2 backdrop-blur-md text-[10px] sm:text-[11px] font-bold tracking-[0.22em] text-white/90 uppercase shadow-lg">
+            <ShieldCheck className="size-3 shrink-0 text-sky-300" />
+            <span>Most Trusted Dental Clinic in Panipat</span>
           </div>
+        </FadeIn>
 
-          <FadeIn direction="left" delay={0.2} className="relative hidden lg:block">
-            <div className="relative overflow-visible px-2 pt-0 pb-8">
-              <div className="relative aspect-[3/4] overflow-hidden rounded-2xl shadow-2xl shadow-primary/10 ring-1 ring-border/50 bg-muted/20">
-                <Image
-                  src="/hero_image.jpeg"
-                  alt="Dr. Parul Jangra"
-                  fill
-                  className="object-cover object-top"
-                  priority
-                  sizes="(max-width: 1024px) 100vw, 50vw"
+        {/* ── Headline ── */}
+        <FadeIn direction="up" delay={0.1}>
+          <h1 className="mt-6 max-w-4xl fluid-display font-extrabold leading-[1.04] tracking-tight text-white drop-shadow-[0_2px_24px_rgba(0,0,0,0.4)]">
+            Where Science Meets{" "}
+            <span className="relative inline-block">
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-sky-300 via-blue-200 to-sky-400">
+                the Art of Smiles.
+              </span>
+              {/* Wavy underline */}
+              <svg
+                className="absolute -bottom-1.5 left-0 w-full"
+                viewBox="0 0 400 10"
+                fill="none"
+                preserveAspectRatio="none"
+                aria-hidden="true"
+              >
+                <path
+                  d="M2 7 Q50 1 100 6 Q150 11 200 5 Q250 0 300 6 Q350 11 398 5"
+                  stroke="rgba(125,211,252,0.6)"
+                  strokeWidth="2.5"
+                  strokeLinecap="round"
                 />
-                <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent px-6 py-8">
-                  <p className="text-lg leading-tight font-semibold text-white">Dr. Parul Jangra</p>
-                  <p className="mt-1 text-xs font-medium text-white/80">BDS (M.I.D.A) · Oral & Dental Surgeon</p>
-                  <p className="mt-0.5 text-[10px] font-medium text-white/60 tracking-wider">Reg. no. 009857</p>
-                </div>
+              </svg>
+            </span>
+          </h1>
+        </FadeIn>
+
+        {/* ── Sub-copy ── */}
+        <FadeIn direction="up" delay={0.18}>
+          <p className="mt-6 max-w-xl text-[15px] sm:text-base leading-[1.8] text-white/72 font-normal">
+            Advanced clinical care with a calmer, more polished patient experience — every
+            consultation, treatment plan, and smile makeover feels precise, personal, and
+            confidence-building.
+          </p>
+        </FadeIn>
+
+        {/* ══════════════════════════════════════════
+            STAT BAR
+        ══════════════════════════════════════════ */}
+        <FadeIn direction="up" delay={0.26}>
+          <div className="mt-10 grid grid-cols-2 sm:grid-cols-4 gap-px overflow-hidden rounded-2xl shadow-[0_8px_60px_rgba(0,0,0,0.45)] ring-1 ring-white/10 bg-white/8">
+            {stats.map(({ value, suffix, label, icon: Icon, decimals }) => (
+              <div
+                key={label}
+                className="flex flex-col items-center justify-center gap-1.5 bg-white/[0.08] backdrop-blur-xl px-6 py-5 sm:py-6 hover:bg-white/[0.13] transition-colors duration-300 first:rounded-l-2xl last:rounded-r-2xl"
+              >
+                <Icon className="size-4 text-sky-300 mb-0.5" />
+                <p className="text-2xl sm:text-3xl font-extrabold tracking-tight text-white">
+                  <Counter value={value} suffix={suffix} decimals={decimals ?? 0} />
+                </p>
+                <p className="text-[10px] sm:text-[11px] font-medium text-white/55 text-center leading-tight">
+                  {label}
+                </p>
               </div>
+            ))}
+          </div>
+        </FadeIn>
 
-              <motion.div
-                animate={{ y: [0, -8, 0] }}
-                transition={{ repeat: Infinity, duration: 4, ease: "easeInOut" }}
-                className="absolute -top-5 right-6 rounded-[24px] border border-white/70 bg-white/92 px-4 py-3 shadow-xl"
-              >
-                <div className="flex items-center gap-3">
-                  <div className="rounded-xl bg-amber-50 p-2">
-                    <Star className="size-4 fill-yellow-500 text-yellow-500" />
-                  </div>
-                  <div>
-                    <p className="text-sm font-bold leading-none">4.9 / 5.0</p>
-                    <p className="mt-1 text-[11px] text-muted-foreground">Google Reviews</p>
-                  </div>
-                </div>
-              </motion.div>
+        {/* ── Service pills ── */}
+        <FadeIn direction="up" delay={0.33}>
+          <div className="mt-6 flex flex-wrap justify-center gap-2">
+            {["Smile Design", "Implants", "Invisible Aligners", "Root Canal", "Teeth Whitening"].map(
+              (item) => (
+                <span
+                  key={item}
+                  className="rounded-full border border-white/15 bg-white/8 backdrop-blur-md px-3.5 py-1.5 text-[11px] font-medium text-white/75 hover:bg-white/14 hover:text-white/95 transition-colors duration-200 cursor-default"
+                >
+                  {item}
+                </span>
+              )
+            )}
+          </div>
+        </FadeIn>
 
-              <motion.div
-                animate={{ y: [0, 6, 0] }}
-                transition={{ repeat: Infinity, duration: 5, ease: "easeInOut", delay: 1 }}
-                className="absolute -bottom-1 left-6 flex items-center gap-3 rounded-[24px] bg-primary px-4 py-3 text-primary-foreground shadow-xl"
-              >
-                <PhoneCall className="size-4 shrink-0" />
-                <div>
-                  <p className="text-[10px] leading-none opacity-75">Available</p>
-                  <p className="mt-0.5 text-sm font-semibold">7 Days a Week</p>
-                </div>
-              </motion.div>
+        {/* ── CTA buttons ── */}
+        <FadeIn direction="up" delay={0.42}>
+          <div className="mt-8 flex flex-col sm:flex-row items-center gap-3">
+            {/* Primary — solid white */}
+            <Link
+              href={siteConfig.links.whatsapp}
+              target="_blank"
+              className="inline-flex items-center justify-center gap-2 h-13 rounded-xl bg-white px-8 text-sm font-semibold text-[oklch(0.22_0.09_244)] shadow-[0_4px_30px_rgba(255,255,255,0.22)] hover:bg-white/90 hover:shadow-[0_6px_40px_rgba(255,255,255,0.3)] active:scale-[0.98] transition-all duration-200"
+            >
+              <MessageSquare className="size-4" />
+              Book Free Consultation
+            </Link>
+
+            {/* Secondary — glass */}
+            <Link
+              href="/services"
+              className="inline-flex items-center justify-center gap-2 h-13 rounded-xl border border-white/25 bg-white/10 backdrop-blur-md px-8 text-sm font-semibold text-white hover:bg-white/18 hover:border-white/40 active:scale-[0.98] transition-all duration-200"
+            >
+              Explore Services
+              <ArrowRight className="size-4" />
+            </Link>
+          </div>
+        </FadeIn>
+
+        {/* ── Floating trust badges ── */}
+        {/* Google rating */}
+        <FadeIn direction="up" delay={0.5}>
+          <motion.div
+            animate={{ y: [0, -7, 0] }}
+            transition={{ repeat: Infinity, duration: 4.5, ease: "easeInOut" }}
+            className="absolute top-[14%] right-8 lg:right-16 hidden md:flex items-center gap-3 rounded-2xl border border-white/18 bg-white/10 backdrop-blur-xl px-4 py-3 shadow-2xl"
+          >
+            <div className="rounded-xl bg-amber-400/20 p-2">
+              <Star className="size-4 fill-yellow-400 text-yellow-400" />
             </div>
-          </FadeIn>
-        </div>
+            <div className="text-left">
+              <p className="text-sm font-bold leading-none text-white">4.9 / 5.0</p>
+              <p className="mt-1 text-[10px] text-white/60">500+ Google Reviews</p>
+            </div>
+          </motion.div>
+        </FadeIn>
+
+        {/* Doctor nameplate */}
+        <FadeIn direction="up" delay={0.55}>
+          <motion.div
+            animate={{ y: [0, 6, 0] }}
+            transition={{ repeat: Infinity, duration: 5.5, ease: "easeInOut", delay: 1.2 }}
+            className="absolute top-[18%] left-8 lg:left-16 hidden md:block rounded-2xl border border-white/18 bg-white/10 backdrop-blur-xl px-5 py-4 shadow-2xl text-left"
+          >
+            <div className="flex items-center gap-3">
+              <div className="size-9 rounded-full bg-sky-400/20 flex items-center justify-center shrink-0">
+                <ShieldCheck className="size-4 text-sky-300" />
+              </div>
+              <div>
+                <p className="text-sm font-bold text-white leading-none">Dr. Parul Jangra</p>
+                <p className="mt-1 text-[10px] text-white/55 font-medium">BDS · Oral &amp; Dental Surgeon</p>
+                <p className="text-[9px] text-white/40 tracking-wider mt-0.5">Reg. No. 009857</p>
+              </div>
+            </div>
+          </motion.div>
+        </FadeIn>
+
       </div>
+
+      {/* ══════════════════════════════════════════
+          BOTTOM SCROLL INDICATOR
+      ══════════════════════════════════════════ */}
+      <div className="absolute bottom-8 left-1/2 -translate-x-1/2 z-10 flex flex-col items-center gap-1.5">
+        <motion.div
+          animate={{ y: [0, 6, 0] }}
+          transition={{ repeat: Infinity, duration: 2, ease: "easeInOut" }}
+        >
+          <ChevronDown className="size-5 text-white/40" />
+        </motion.div>
+        <span className="text-[9px] tracking-[0.22em] text-white/30 uppercase font-medium">Scroll</span>
+      </div>
+
+      {/* ══════════════════════════════════════════
+          BOTTOM FROSTED EDGE — soft blend into next section
+      ══════════════════════════════════════════ */}
+      <div className="absolute inset-x-0 bottom-0 h-28 bg-gradient-to-t from-background to-transparent z-10 pointer-events-none" />
+
     </section>
   );
 }
