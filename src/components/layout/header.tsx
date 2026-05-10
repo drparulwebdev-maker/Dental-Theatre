@@ -2,6 +2,7 @@
 
 import * as React from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { usePathname } from "next/navigation";
 import { cn } from "@/lib/utils";
 import { Button } from "@/components/ui/button";
@@ -15,14 +16,14 @@ import {
   navigationMenuTriggerStyle,
 } from "@/components/ui/navigation-menu";
 import { Sheet, SheetContent, SheetTrigger, SheetTitle, SheetHeader, SheetFooter } from "@/components/ui/sheet";
-import { Menu, Phone, MessageSquare, Home, Info, Stethoscope, Image, Mail, Instagram, Facebook, Youtube } from "lucide-react";
+import { Menu, Phone, MessageSquare, Home, Info, Stethoscope, Image as ImageIcon, Mail, Instagram, Facebook, Youtube } from "lucide-react";
 import { siteConfig } from "@/lib/data/site-data";
 
 const navItems = [
   { title: "Home", href: "/", icon: Home },
   { title: "About", href: "/about", icon: Info },
   { title: "Services", href: "/services", icon: Stethoscope },
-  { title: "Gallery", href: "/gallery", icon: Image },
+  { title: "Gallery", href: "/gallery", icon: ImageIcon },
   { title: "Contact", href: "/#locations", icon: Phone },
 ];
 
@@ -34,7 +35,8 @@ export function Header() {
     <header className="sticky top-0 z-50 w-full border-b border-border/60 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
       <div className="container mx-auto flex h-16 items-center justify-between px-6 lg:px-10 max-w-7xl">
         <div className="flex items-center gap-2">
-          <Link href="/" className="flex items-center space-x-2">
+          <Link href="/" className="flex items-center">
+            <Image src="/Logo.png" alt="Dental Theatre Logo" width={32} height={32} className="h-8 w-auto object-contain" />
             <span className="text-2xl font-bold tracking-tight text-primary">
               Dental <span className="text-foreground/80">Theatre</span>
             </span>
@@ -81,7 +83,8 @@ export function Header() {
             } />
             <SheetContent side="right" className="w-[300px] sm:w-[350px] p-0 flex flex-col">
               <SheetHeader className="p-6 border-b border-border/40">
-                <SheetTitle className="text-left flex items-center gap-2">
+                <SheetTitle className="text-left flex items-center">
+                  <Image src="/Logo.png" alt="Dental Theatre Logo" width={28} height={28} className="h-7 w-auto object-contain" />
                   <span className="text-xl font-bold tracking-tight text-primary">
                     Dental <span className="text-foreground/80">Theatre</span>
                   </span>

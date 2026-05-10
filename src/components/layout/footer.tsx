@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import * as LucideIcons from "lucide-react";
 import { siteConfig } from "@/lib/data/site-data";
 
@@ -18,8 +19,9 @@ export function Footer() {
       <div className="container relative mx-auto max-w-7xl px-6 lg:px-10">
         <div className="grid grid-cols-1 gap-10 pt-14 pb-8 md:grid-cols-2 lg:grid-cols-4">
           <div className="flex flex-col gap-4 lg:col-span-1">
-            <Link href="/" className="flex items-center">
-              <span className="font-heading text-3xl leading-none text-white">
+            <Link href="/" className="flex items-center gap-0.5 -ml-2">
+              <Image src="/Logo.png" alt="Dental Theatre Logo" width={36} height={36} className="h-9 w-auto object-contain brightness-0 invert" />
+              <span className="text-2xl font-bold tracking-tight text-white">
                 Dental <span className="text-sky-200">Theatre</span>
               </span>
             </Link>
@@ -126,3 +128,4 @@ export function Footer() {
     </footer>
   );
 }
+
