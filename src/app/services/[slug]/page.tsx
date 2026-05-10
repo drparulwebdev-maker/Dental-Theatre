@@ -76,7 +76,7 @@ export default async function ServiceDetailPage({ params }: ServicePageProps) {
                       {service.description}
                     </p>
                     <p className="text-lg leading-relaxed text-slate-600">
-                      At Dental Theatre, we prioritize your comfort and oral health above all else. Our team of specialists, led by Dr. Parul Jangra, utilizes the latest technology and techniques to ensure that your treatment is both effective and painless.
+                      At Dental Theatre, we prioritize your comfort and oral health above all else. Our dedicated team of specialists utilizes the latest technology and techniques to ensure that your treatment is both effective and painless.
                     </p>
                   </div>
                   
@@ -116,7 +116,7 @@ export default async function ServiceDetailPage({ params }: ServicePageProps) {
                     Book a Consultation
                   </h3>
                   <p className="mb-6 text-sm text-slate-600">
-                    Speak with Dr. Parul Jangra about {service.title.toLowerCase()} and get a personalized treatment plan.
+                    Speak with our specialists about {service.title.toLowerCase()} and get a personalized treatment plan.
                   </p>
                   
                   <div className="space-y-3">
@@ -141,13 +141,25 @@ export default async function ServiceDetailPage({ params }: ServicePageProps) {
                   </div>
 
                   <div className="mt-8 border-t border-slate-200 pt-6">
-                    <div className="flex items-center gap-3">
-                      <div className="size-10 rounded-full bg-sky-100 flex items-center justify-center text-sky-600">
+                    <div className="flex items-start gap-3">
+                      <div className="mt-1 flex size-10 shrink-0 items-center justify-center rounded-full bg-sky-100 text-sky-600">
                         <LucideIcons.Clock className="size-5" />
                       </div>
-                      <div>
-                        <p className="text-xs font-bold text-slate-900 uppercase tracking-wider">Opening Hours</p>
-                        <p className="text-xs text-slate-500">Mon-Sat: 9:30 AM - 7:30 PM</p>
+                      <div className="w-full">
+                        <p className="mb-2 text-xs font-bold uppercase tracking-wider text-slate-900">
+                          Opening Hours
+                        </p>
+                        <div className="space-y-1 text-xs text-slate-600">
+                          {siteConfig.locations[0].hours.split(', ').map((time, idx) => {
+                            const [day, hours] = time.split(': ');
+                            return (
+                              <div key={idx} className="flex justify-between">
+                                <span className="font-medium text-slate-700">{day}</span>
+                                <span>{hours}</span>
+                              </div>
+                            );
+                          })}
+                        </div>
                       </div>
                     </div>
                   </div>
