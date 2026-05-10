@@ -35,7 +35,7 @@ export function Header() {
     <header className="sticky top-0 z-50 w-full border-b border-border/60 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
       <div className="container mx-auto flex h-16 items-center justify-between px-6 lg:px-10 max-w-7xl">
         <div className="flex items-center gap-2">
-          <Link href="/" className="flex items-center">
+          <Link href="/" className="flex items-center gap-0.5 -ml-1.5">
             <Image src="/Logo.png" alt="Dental Theatre Logo" width={32} height={32} className="h-8 w-auto object-contain" />
             <span className="text-2xl font-bold tracking-tight text-primary">
               Dental <span className="text-foreground/80">Theatre</span>
@@ -83,7 +83,7 @@ export function Header() {
             } />
             <SheetContent side="right" className="w-[300px] sm:w-[350px] p-0 flex flex-col">
               <SheetHeader className="p-6 border-b border-border/40">
-                <SheetTitle className="text-left flex items-center">
+                <SheetTitle className="text-left flex items-center gap-0.5 -ml-1">
                   <Image src="/Logo.png" alt="Dental Theatre Logo" width={28} height={28} className="h-7 w-auto object-contain" />
                   <span className="text-xl font-bold tracking-tight text-primary">
                     Dental <span className="text-foreground/80">Theatre</span>

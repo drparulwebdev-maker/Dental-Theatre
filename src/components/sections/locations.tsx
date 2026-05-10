@@ -9,34 +9,37 @@ import { Button } from "@/components/ui/button";
 import Link from "next/link";
 import { cn } from "@/lib/utils";
 
+const doctors = [
+  {
+    name: "Dr. Parul Jangra",
+    role: "Implantologist & Aligner Specialist",
+    tags: ["Smile Design", "Implants"],
+    regNo: "009857",
+  },
+  {
+    name: "Dr. Bijender Duhan",
+    role: "Orthodontics & Ortho Surgeon",
+    tags: ["Implantology", "Faicial Trauma"],
+    regNo: "6196",
+  }
+];
+
 const extendedLocations = [
   {
     ...siteConfig.locations[0],
     shortName: "Main Branch",
-    doctor: "Dr. Parul Jangra",
-    doctorRole: "Implantologist & Aligner Specialist",
-    doctorTags: ["Smile Design", "Implants", "Oral Surgery"],
-    regNo: "009857",
     image: "bg-[linear-gradient(135deg,#0f2f5e_0%,#1c6aa1_48%,#93d8f5_100%)]",
     mapEmbed: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d13905.565347388138!2d76.96347470111633!3d29.388106029308222!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390ddbe4b5af9bb1%3A0x61671b9b559b5bbd!2sDr%20Duhan%20and%20Dr%20Parul%27s%20Dental%20Theatre%20-%20Sanoli%20Road%20Panipat!5e0!3m2!1sen!2sin!4v1778243719107!5m2!1sen!2sin",
   },
   {
-    ...siteConfig.locations[1],
-    shortName: "City Center",
-    doctor: "Dr. Amit Sharma",
-    doctorRole: "Orthodontist",
-    doctorTags: ["Braces", "Invisalign", "8+ Yrs Exp"],
+    name: "Dental Theatre - Gupta Hospital",
+    shortName: "Gupta Hospital",
+    address: "Room No. 25, G.C. Gupta Hospital, Gohana Road, HUDA Sector 11, Panipat",
+    phone: "+91 89302 44673",
+    hours: "Open 24hrs",
+    mapUrl: "https://www.google.com/maps/place/Dr+Duhan+%26+Dr+Parul%E2%80%99s+DENTAL+Theatre/@29.3806061,76.9768055,19.75z/data=!4m6!3m5!1s0x48fc794398599e8f:0x54a48e94484ea7e3!8m2!3d29.3806952!4d76.9769885!16s%2Fg%2F11tp5rv3k1?entry=ttu&g_ep=EgoyMDI2MDUwNi4wIKXMDSoASAFQAw%3D%3D",
     image: "bg-[linear-gradient(135deg,#35668f_0%,#7bc0d8_52%,#dff6fb_100%)]",
-    mapEmbed: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d111551.99264671043!2d76.9712!3d29.3909!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390ddb0507a213e1%3A0xcb1b590e89cb79e0!2sPanipat%2C%20Haryana!5e0!3m2!1sen!2sin!4v1715000000000!5m2!1sen!2sin",
-  },
-  {
-    ...siteConfig.locations[2],
-    shortName: "HUDA Section",
-    doctor: "Dr. Neha Verma",
-    doctorRole: "Pediatric Dentist",
-    doctorTags: ["Child Care", "Painless", "5+ Yrs Exp"],
-    image: "bg-[linear-gradient(160deg,#0b2449_0%,#14578a_58%,#7ccde8_100%)]",
-    mapEmbed: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d111551.99264671043!2d76.9712!3d29.3909!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390ddb0507a213e1%3A0xcb1b590e89cb79e0!2sPanipat%2C%20Haryana!5e0!3m2!1sen!2sin!4v1715000000000!5m2!1sen!2sin",
+    mapEmbed: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d614.5903240929982!2d76.97690003445777!3d29.380597493922256!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x48fc794398599e8f%3A0x54a48e94484ea7e3!2sDr%20Duhan%20%26%20Dr%20Parul%E2%80%99s%20DENTAL%20Theatre!5e0!3m2!1sen!2sin!4v1778405890997!5m2!1sen!2sin",
   },
 ];
 
@@ -47,7 +50,7 @@ export function LocationsSection({ id }: { id?: string }) {
   return (
     <section id={id} className="relative overflow-hidden bg-white py-12 sm:py-16 lg:py-24">
       <div className="container mx-auto max-w-7xl px-5 sm:px-6 lg:px-10">
-        
+
         <FadeIn direction="up" className="mb-4 sm:mb-6 text-center lg:text-left">
           <p className="mb-3 text-[11px] font-bold tracking-[0.3em] text-primary uppercase">
             Our Clinics
@@ -60,12 +63,12 @@ export function LocationsSection({ id }: { id?: string }) {
         <div className="flex flex-col">
           {/* Location Switcher */}
           <FadeIn direction="up" delay={0.1}>
-            <div 
-              className="mb-4 flex w-full gap-2 overflow-x-auto rounded-2xl border border-border/50 bg-slate-100/50 p-2 sm:mb-5 sm:w-fit sm:flex-wrap sm:overflow-visible sm:p-1.5"
+            <div
+              className="flex w-full gap-2 overflow-x-auto rounded-2xl border border-border/50 bg-slate-100/50 p-2 sm:w-fit sm:flex-wrap sm:overflow-visible sm:p-1.5"
               style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}
             >
-              {/* For Webkit browsers (Chrome, Safari, Edge) */}
-              <style dangerouslySetInnerHTML={{ __html: `
+              <style dangerouslySetInnerHTML={{
+                __html: `
                 .overflow-x-auto::-webkit-scrollbar {
                   display: none;
                 }
@@ -84,12 +87,11 @@ export function LocationsSection({ id }: { id?: string }) {
                   {loc.shortName}
                 </button>
               ))}
-              {/* Invisible spacer to ensure the last button has padding at the end of scroll */}
               <div className="w-4 shrink-0 sm:hidden" aria-hidden="true" />
             </div>
           </FadeIn>
 
-          <div className="min-h-0">
+          <div className="min-h-0 mt-2 sm:mt-3">
             <AnimatePresence mode="wait">
               <motion.div
                 key={activeIndex}
@@ -99,47 +101,43 @@ export function LocationsSection({ id }: { id?: string }) {
                 transition={{ duration: 0.3 }}
                 className="grid grid-cols-1 gap-9 sm:gap-12 lg:grid-cols-2 lg:items-center lg:gap-16"
               >
-                {/* Left side on desktop, Reordered on mobile */}
                 <div className="flex flex-col gap-6 sm:gap-8 lg:col-start-1">
-                  {/* Clinic Name - Order 1 mobile */}
                   <h3 className="order-1 text-[1.45rem] font-bold leading-tight sm:text-2xl">{activeLocation.name}</h3>
 
-                  {/* Doctor Profile - Order 2 mobile */}
-                  <div className="order-2 rounded-[22px] border border-primary/10 bg-slate-50/80 p-5 shadow-sm sm:rounded-[24px] sm:p-6">
-                    <div className="mb-4 flex items-center gap-3 sm:gap-4">
-                      <div className="flex size-12 shrink-0 items-center justify-center rounded-full bg-primary/10 text-primary sm:size-14">
-                        <User className="size-5 sm:size-6" />
+                  {/* Doctor Profiles - Side by Side */}
+                  <div className="order-2 grid grid-cols-1 gap-3 sm:grid-cols-2">
+                    {doctors.map((doc) => (
+                      <div key={doc.name} className="rounded-2xl border border-primary/10 bg-slate-50/80 p-4 shadow-sm">
+                        <div className="mb-3 flex items-center gap-3">
+                          <div className="flex size-10 shrink-0 items-center justify-center rounded-full bg-primary/10 text-primary">
+                            <User className="size-5" />
+                          </div>
+                          <div>
+                            <p className="text-[13px] font-bold text-foreground">{doc.name}</p>
+                            <p className="text-[11px] font-medium text-primary line-clamp-1">{doc.role}</p>
+                          </div>
+                        </div>
+                        <div className="flex flex-wrap gap-1.5">
+                          {doc.tags.map((tag) => (
+                            <span
+                              key={tag}
+                              className="rounded-lg bg-white px-2 py-0.5 text-[9px] font-medium text-muted-foreground shadow-xs border border-border/50"
+                            >
+                              {tag}
+                            </span>
+                          ))}
+                        </div>
                       </div>
-                      <div>
-                        <p className="text-base font-bold text-foreground sm:text-lg">{activeLocation.doctor}</p>
-                        <p className="text-xs font-medium text-primary sm:text-sm">{activeLocation.doctorRole}</p>
-                        {"regNo" in activeLocation && (
-                          <p className="mt-0.5 text-[10px] text-muted-foreground uppercase tracking-wider">
-                            Reg. no. {activeLocation.regNo}
-                          </p>
-                        )}
-                      </div>
-                    </div>
-                    
-                    <div className="flex flex-wrap gap-2">
-                      {activeLocation.doctorTags.map((tag) => (
-                        <span
-                          key={tag}
-                          className="rounded-full bg-white px-3 py-1 text-xs font-medium text-muted-foreground shadow-sm border border-border/50"
-                        >
-                          {tag}
-                        </span>
-                      ))}
-                    </div>
+                    ))}
                   </div>
 
-                  {/* Desktop dummy spacer for Image/Map column on mobile */}
+                  {/* Mobile Image/Map column */}
                   <div className="order-3 block lg:hidden">
                     <div className="relative h-[360px] w-full overflow-hidden rounded-[26px] shadow-2xl shadow-primary/10 ring-1 ring-border/50 sm:h-[430px] sm:rounded-[32px]">
-                       <div className={cn("absolute inset-0 transition-colors duration-500", activeLocation.image)}>
+                      <div className={cn("absolute inset-0 transition-colors duration-500", activeLocation.image)}>
                         <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(255,255,255,0.2),transparent_50%)]" />
                         <div className="absolute inset-0 flex items-center justify-center">
-                           <p className="text-white/60 tracking-widest uppercase text-sm font-semibold">Clinic Interior</p>
+                          <p className="text-white/60 tracking-widest uppercase text-xs font-semibold">Clinic Interior</p>
                         </div>
                       </div>
 
@@ -156,7 +154,6 @@ export function LocationsSection({ id }: { id?: string }) {
                     </div>
                   </div>
 
-                  {/* Info Text - Order 4 mobile */}
                   <div className="order-4 space-y-3 text-muted-foreground">
                     <div className="flex items-start gap-3">
                       <MapPin className="size-5 shrink-0 text-primary mt-0.5" />
@@ -172,7 +169,6 @@ export function LocationsSection({ id }: { id?: string }) {
                     </div>
                   </div>
 
-                  {/* CTA Buttons - Order 5 mobile */}
                   <div className="order-5 grid gap-3 sm:flex sm:flex-wrap">
                     <Button
                       nativeButton={false}
@@ -196,13 +192,12 @@ export function LocationsSection({ id }: { id?: string }) {
                   </div>
                 </div>
 
-                {/* Right side on desktop, Hidden on mobile (handled above) */}
-                <div className="hidden lg:block lg:col-start-2">
+                <div className="hidden lg:block lg:col-start-2 lg:-mt-12">
                   <div className="relative h-[360px] w-full overflow-hidden rounded-[26px] shadow-2xl shadow-primary/10 ring-1 ring-border/50 sm:h-[430px] sm:rounded-[32px] lg:h-[500px]">
                     <div className={cn("absolute inset-0 transition-colors duration-500", activeLocation.image)}>
                       <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(255,255,255,0.2),transparent_50%)]" />
                       <div className="absolute inset-0 flex items-center justify-center">
-                         <p className="text-white/60 tracking-widest uppercase text-sm font-semibold">Clinic Interior</p>
+                        <p className="text-white/60 tracking-widest uppercase text-xs font-semibold">Clinic Interior</p>
                       </div>
                     </div>
 
