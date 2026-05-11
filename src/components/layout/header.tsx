@@ -16,7 +16,7 @@ import {
   navigationMenuTriggerStyle,
 } from "@/components/ui/navigation-menu";
 import { Sheet, SheetContent, SheetTrigger, SheetTitle, SheetHeader, SheetFooter } from "@/components/ui/sheet";
-import { Menu, Phone, MessageSquare, Home, Info, Stethoscope, Image as ImageIcon, Mail, Instagram, Facebook, Youtube, Users } from "lucide-react";
+import { Menu, Phone, MessageSquare, Home, Info, Stethoscope, Image as ImageIcon, Instagram, Facebook, Youtube, Users } from "lucide-react";
 import { siteConfig } from "@/lib/data/site-data";
 
 const navItems = [
@@ -132,18 +132,6 @@ export function Header() {
 
               <SheetFooter className="p-6 border-t border-border/40 bg-muted/20">
                 <div className="flex flex-col gap-4 w-full">
-                  <div className="flex flex-col gap-2">
-                    <p className="text-xs font-semibold uppercase tracking-wider text-muted-foreground/60">Contact Info</p>
-                    <a href={`tel:${siteConfig.locations[0].phone}`} className="flex items-center gap-2 text-sm text-foreground/80 hover:text-primary transition-colors">
-                      <Phone className="size-4 text-primary/70" />
-                      {siteConfig.locations[0].phone}
-                    </a>
-                    <a href={`mailto:${siteConfig.email}`} className="flex items-center gap-2 text-sm text-foreground/80 hover:text-primary transition-colors">
-                      <Mail className="size-4 text-primary/70" />
-                      {siteConfig.email}
-                    </a>
-                  </div>
-                  
                   <div className="flex items-center gap-3 mt-2">
                     <Link href={siteConfig.links.instagram} target="_blank" className="p-2 rounded-full bg-background border border-border/60 text-muted-foreground hover:text-primary hover:border-primary/40 transition-all">
                       <Instagram className="size-4" />
