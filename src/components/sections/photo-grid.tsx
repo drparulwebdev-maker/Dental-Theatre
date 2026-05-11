@@ -22,7 +22,7 @@ export function PhotoGridSection() {
           <h2 className="font-heading text-[2rem] leading-tight sm:text-4xl md:text-5xl md:leading-none">
             A calmer, more elevated treatment experience.
           </h2>
-          <p className="mt-4 max-w-xl text-[14px] leading-[1.75] text-muted-foreground sm:mt-5 sm:text-[15px] sm:leading-[1.85]">
+          <p className="mt-4 hidden max-w-xl text-[14px] leading-[1.75] text-muted-foreground sm:mt-5 sm:block sm:text-[15px] sm:leading-[1.85]">
             Discover the serene and modern environment of our dental clinic, where advanced technology and compassionate care come together to create a calming treatment experience.
           </p>
 
@@ -45,14 +45,15 @@ export function PhotoGridSection() {
 
           <Link
             href="/gallery"
-            className="mt-8 inline-flex w-fit items-center gap-2 text-sm font-semibold text-primary transition-transform hover:translate-x-1"
+            className="mt-8 hidden sm:inline-flex w-fit items-center gap-2 text-sm font-semibold text-primary transition-transform hover:translate-x-1"
           >
             Explore full smile gallery
             <ArrowRight className="size-4" />
           </Link>
         </FadeIn>
 
-        <div className="grid auto-rows-[132px] grid-cols-2 gap-3 sm:auto-rows-[140px] sm:gap-4 md:auto-rows-[160px]">
+        <div className="flex flex-col gap-4 sm:block">
+          <div className="grid auto-rows-[132px] grid-cols-2 gap-3 sm:auto-rows-[140px] sm:gap-4 md:auto-rows-[160px]">
           {siteConfig.galleryHighlights.map((item, index) => (
             <FadeIn
               key={item.title}
@@ -83,6 +84,17 @@ export function PhotoGridSection() {
               </div>
             </FadeIn>
           ))}
+        </div>
+
+          <FadeIn direction="up" className="sm:hidden flex justify-start">
+            <Link
+              href="/gallery"
+              className="inline-flex w-fit items-center gap-2 text-sm font-semibold text-primary transition-transform hover:translate-x-1"
+            >
+              Explore full smile gallery
+              <ArrowRight className="size-4" />
+            </Link>
+          </FadeIn>
         </div>
       </div>
     </section>

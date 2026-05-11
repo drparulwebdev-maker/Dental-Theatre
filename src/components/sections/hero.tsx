@@ -4,10 +4,8 @@ import { motion } from "framer-motion";
 import {
   ArrowRight,
   MessageSquare,
-  ShieldCheck,
   Star,
   Users,
-  CalendarCheck,
   MapPin,
   ChevronDown,
 } from "lucide-react";
@@ -58,22 +56,22 @@ export function Hero() {
       {/* ══════════════════════════════════════════
           MAIN CONTENT — vertically centred column
       ══════════════════════════════════════════ */}
-      <div className="relative z-10 flex flex-1 flex-col items-center justify-center text-center px-5 sm:px-8 pt-20 pb-32 sm:pt-24 sm:pb-36">
+      <div className="relative z-10 flex flex-1 flex-col items-center justify-center text-center px-6 sm:px-8 pt-16 pb-24 sm:pt-24 sm:pb-36">
 
         {/* ── Eyebrow — minimal, medical, authoritative ── */}
         <FadeIn direction="up">
-          <div className="inline-flex items-center gap-2.5 mb-8">
-            <span className="block h-px w-8 bg-sky-400/70" />
-            <span className="text-[10px] sm:text-[11px] font-semibold tracking-[0.28em] text-sky-300/90 uppercase">
+          <div className="mb-6 inline-flex max-w-[19rem] items-center justify-center gap-2 sm:mb-8 sm:max-w-none sm:gap-2.5">
+            <span className="block h-px w-6 sm:w-8 bg-sky-400/70" />
+            <span className="text-[9px] leading-[1.45] sm:text-[11px] font-semibold tracking-[0.24em] sm:tracking-[0.28em] text-sky-300/90 uppercase">
               Most Trusted Dental Clinic in Panipat
             </span>
-            <span className="block h-px w-8 bg-sky-400/70" />
+            <span className="block h-px w-6 sm:w-8 bg-sky-400/70" />
           </div>
         </FadeIn>
 
         {/* ── Headline — dual weight for typographic hierarchy ── */}
         <FadeIn direction="up" delay={0.1}>
-          <h1 className="max-w-4xl fluid-display leading-[1.05] tracking-tight text-white drop-shadow-[0_2px_32px_rgba(0,0,0,0.5)]">
+          <h1 className="max-w-[19rem] sm:max-w-4xl text-[clamp(2.85rem,10.8vw,4.1rem)] sm:fluid-display leading-[0.98] sm:leading-[1.05] tracking-tight text-white drop-shadow-[0_2px_32px_rgba(0,0,0,0.5)]">
             <span className="font-light text-white/80">Where Science Meets</span>
             <br />
             <span className="font-black text-white">
@@ -93,21 +91,21 @@ export function Hero() {
 
         {/* ── Sub-copy — one line, punchy, subdued ── */}
         <FadeIn direction="up" delay={0.18}>
-          <p className="mt-5 text-[15px] sm:text-[16px] leading-relaxed text-white/95 font-medium tracking-wide drop-shadow-[0_4px_12px_rgba(0,0,0,0.8)]">
+          <p className="mt-4 max-w-[21rem] sm:max-w-none text-[14px] sm:text-[16px] leading-[1.75] sm:leading-relaxed text-white/95 font-semibold sm:font-medium tracking-normal sm:tracking-wide drop-shadow-[0_4px_12px_rgba(0,0,0,0.8)]">
             Advanced dentistry. Unhurried care. Three locations across Panipat.
-            <br />
+            <br className="hidden sm:block" />
             Where every smile gets a treatment plan, not just a procedure.
           </p>
         </FadeIn>
 
         {/* ── CTA buttons — clear visual hierarchy ── */}
         <FadeIn direction="up" delay={0.26}>
-          <div className="mt-9 flex flex-col sm:flex-row items-center gap-3">
+          <div className="mt-8 flex w-full max-w-[20rem] flex-col items-center gap-3 sm:mt-9 sm:max-w-none sm:flex-row">
             {/* Primary — solid white, dominant */}
             <Link
               href={siteConfig.links.whatsapp}
               target="_blank"
-              className="inline-flex items-center justify-center gap-2 h-12 rounded-xl bg-white px-8 text-[13px] font-semibold text-[#020817] shadow-[0_0_0_0_rgba(255,255,255,0),0_8px_40px_rgba(255,255,255,0.18)] hover:shadow-[0_8px_50px_rgba(255,255,255,0.32)] hover:bg-white/95 active:scale-[0.98] transition-all duration-200"
+              className="inline-flex w-full sm:w-auto items-center justify-center gap-2 h-13 sm:h-12 rounded-2xl sm:rounded-xl bg-white px-8 text-[15px] sm:text-[13px] font-semibold text-[#020817] shadow-[0_0_0_0_rgba(255,255,255,0),0_8px_40px_rgba(255,255,255,0.18)] hover:shadow-[0_8px_50px_rgba(255,255,255,0.32)] hover:bg-white/95 active:scale-[0.98] transition-all duration-200"
             >
               <MessageSquare className="size-[15px]" />
               Book Consultation
@@ -116,7 +114,7 @@ export function Hero() {
             {/* Secondary — minimal border, clearly secondary */}
             <Link
               href="/services"
-              className="inline-flex items-center justify-center gap-2 h-12 rounded-xl border border-white/40 bg-white/10 backdrop-blur-md px-8 text-[13px] font-semibold text-white hover:bg-white/20 hover:border-white/50 active:scale-[0.98] transition-all duration-200"
+              className="inline-flex w-full sm:w-auto items-center justify-center gap-2 h-12 rounded-2xl sm:rounded-xl border border-white/40 bg-white/10 backdrop-blur-md px-8 text-[15px] sm:text-[13px] font-semibold text-white hover:bg-white/20 hover:border-white/50 active:scale-[0.98] transition-all duration-200"
             >
               Explore Services
               <ArrowRight className="size-[15px]" />
@@ -128,13 +126,13 @@ export function Hero() {
             STAT BAR — directly under CTA over image
         ══════════════════════════════════════════ */}
         <FadeIn direction="up" delay={0.34}>
-          <div className="mt-6 sm:mt-8 w-full max-w-3xl mx-auto grid grid-cols-3 divide-x divide-white/15 border-t border-white/15 pt-6 sm:pt-8">
+          <div className="mt-7 sm:mt-8 w-full max-w-[21rem] sm:max-w-3xl mx-auto grid grid-cols-3 divide-x divide-white/15 border-t border-white/15 px-0 pt-5 sm:pt-8">
             {stats.map(({ value, suffix, label, decimals, formatFn }) => (
               <div key={label} className="flex flex-col items-center justify-center px-2 sm:px-4">
-                <p className="text-2xl sm:text-4xl font-light tracking-tight text-white mb-1.5 drop-shadow-md">
+                <p className="mb-1 text-[2rem] sm:text-4xl font-light tracking-tight text-white drop-shadow-md">
                   <Counter value={value} suffix={suffix} decimals={decimals ?? 0} formatFn={formatFn} />
                 </p>
-                <p className="text-[9px] sm:text-[11px] font-semibold text-white/60 uppercase tracking-[0.15em] text-center drop-shadow-sm">
+                <p className="text-[8px] leading-[1.35] sm:text-[11px] font-semibold text-white/65 sm:text-white/60 uppercase tracking-[0.14em] sm:tracking-[0.15em] text-center drop-shadow-sm">
                   {label}
                 </p>
               </div>
@@ -144,7 +142,7 @@ export function Hero() {
       </div>
 
       {/* ── Scroll indicator ── */}
-      <div className="absolute bottom-8 sm:bottom-10 left-1/2 -translate-x-1/2 z-10 flex flex-col items-center gap-1">
+      <div className="absolute bottom-8 sm:bottom-10 left-1/2 -translate-x-1/2 z-10 hidden sm:flex flex-col items-center gap-1">
         <motion.div
           animate={{ y: [0, 5, 0] }}
           transition={{ repeat: Infinity, duration: 2.2, ease: "easeInOut" }}
