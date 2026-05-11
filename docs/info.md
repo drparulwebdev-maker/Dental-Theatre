@@ -55,3 +55,7 @@ Whatsapp no - 8930010599
 > Miscleanous
 
 1L+ patients treated, 12K+ surgeries done
+
+> social links 
+
+Instagram - https://www.instagram.com/dentaltheatrepanipat?igsh=MWYxY3p3Y2dobTNzaA%3D%3D&utm_source=qr

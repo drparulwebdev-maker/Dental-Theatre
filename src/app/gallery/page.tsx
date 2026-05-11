@@ -128,7 +128,7 @@ export default function GalleryPage() {
                 size="lg"
                 variant="outline"
                 className="h-11 w-full rounded-xl px-8 text-sm font-semibold hover:border-primary/50 sm:w-auto"
-                render={<a href="https://instagram.com/dentaltheatre" target="_blank" />}
+                render={<a href="https://www.instagram.com/dentaltheatrepanipat?igsh=MWYxY3p3Y2dobTNzaA%3D%3D&utm_source=qr" target="_blank" />}
               >
                 Follow @dentaltheatre
                 <ArrowRight className="ml-2 size-4" />

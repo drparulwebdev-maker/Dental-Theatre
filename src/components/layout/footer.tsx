@@ -34,6 +34,7 @@ export function Footer() {
             <div className="mt-2 flex items-center gap-3">
               <Link
                 href={siteConfig.links.instagram}
+                target="_blank"
                 className="flex size-10 items-center justify-center rounded-xl border border-white/10 bg-white/5 text-white/70 transition-all hover:bg-white/10 hover:text-white"
               >
                 <Instagram className="size-4" />
@@ -41,6 +42,7 @@ export function Footer() {
               </Link>
               <Link
                 href={siteConfig.links.facebook}
+                target="_blank"
                 className="flex size-10 items-center justify-center rounded-xl border border-white/10 bg-white/5 text-white/70 transition-all hover:bg-white/10 hover:text-white"
               >
                 <Facebook className="size-4" />
@@ -48,6 +50,7 @@ export function Footer() {
               </Link>
               <Link
                 href={siteConfig.links.youtube}
+                target="_blank"
                 className="flex size-10 items-center justify-center rounded-xl border border-white/10 bg-white/5 text-white/70 transition-all hover:bg-white/10 hover:text-white"
               >
                 <Youtube className="size-4" />

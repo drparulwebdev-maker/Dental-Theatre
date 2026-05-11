@@ -15,9 +15,9 @@ export const siteConfig = {
   ],
   links: {
     whatsapp: "https://wa.me/918930010599?text=Hello!%20I%20would%20like%20to%20book%20an%20appointment%20at%20Dental%20Theatre.",
-    instagram: "https://instagram.com/dentaltheatre",
+    instagram: "https://www.instagram.com/dentaltheatrepanipat?igsh=MWYxY3p3Y2dobTNzaA%3D%3D&utm_source=qr",
     facebook: "https://facebook.com/dentaltheatre",
-    youtube: "https://youtube.com/dentaltheatre",
+    youtube: "https://youtube.com/@dentaltheatrepanipat?si=uC6fATLhu6YeIf-r",
   },
   locations: [
     {
