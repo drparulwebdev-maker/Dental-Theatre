@@ -19,7 +19,7 @@ const doctors = [
   {
     name: "Dr. Bijender Duhan",
     role: "Orthodontics & Ortho Surgeon",
-    tags: ["Implantology", "Faicial Trauma"],
+    tags: ["Implantology", "Facial Trauma"],
     regNo: "6196",
   }
 ];
@@ -32,8 +32,8 @@ const extendedLocations = [
     mapEmbed: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d13905.565347388138!2d76.96347470111633!3d29.388106029308222!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390ddbe4b5af9bb1%3A0x61671b9b559b5bbd!2sDr%20Duhan%20and%20Dr%20Parul%27s%20Dental%20Theatre%20-%20Sanoli%20Road%20Panipat!5e0!3m2!1sen!2sin!4v1778243719107!5m2!1sen!2sin",
   },
   {
-    name: "Dental Theatre - Gupta Hospital",
-    shortName: "Gupta Hospital",
+    name: "Dental Theatre - GC Gupta Hospital",
+    shortName: "GC Gupta Hospital",
     address: "Room No. 25, G.C. Gupta Hospital, Gohana Road, HUDA Sector 11, Panipat",
     phone: "+91 89302 44673",
     hours: "Open 24hrs",

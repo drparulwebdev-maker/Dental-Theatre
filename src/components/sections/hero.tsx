@@ -92,7 +92,7 @@ export function Hero() {
         {/* ── Sub-copy — one line, punchy, subdued ── */}
         <FadeIn direction="up" delay={0.18}>
           <p className="mt-4 max-w-[21rem] sm:max-w-none text-[14px] sm:text-[16px] leading-[1.75] sm:leading-relaxed text-white/95 font-semibold sm:font-medium tracking-normal sm:tracking-wide drop-shadow-[0_4px_12px_rgba(0,0,0,0.8)]">
-            Advanced dentistry. Unhurried care. Three locations across Panipat.
+            Advanced dentistry. Unhurried care. Two locations across Panipat.
             <br className="hidden sm:block" />
             Where every smile gets a treatment plan, not just a procedure.
           </p>
