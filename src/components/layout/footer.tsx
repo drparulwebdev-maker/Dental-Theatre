@@ -21,8 +21,8 @@ export function Footer() {
           
           {/* Logo & About */}
           <div className="flex flex-col gap-5 lg:col-span-3">
-            <Link href="/" className="flex items-center gap-1 -ml-2">
-              <Image src="/Logo.png" alt="Dental Theatre Logo" width={40} height={40} className="h-10 w-auto object-contain brightness-0 invert" />
+            <Link href="/" className="flex items-center gap-2">
+              <Image src="/Logo.png" alt="Dental Theatre Logo" width={15} height={15} className="h-10 w-auto object-contain brightness-0 invert" />
               <span className="text-2xl font-bold tracking-tight text-white">
                 Dental <span className="text-sky-200">Theatre</span>
               </span>
@@ -143,33 +143,6 @@ export function Footer() {
                   </div>
                 </div>
               </div>
-            </div>
-          </div>
-        </div>
-
-        {/* Bottom Bar: Copyright & Reg Info */}
-        <div className="mt-4 flex flex-col items-center justify-between gap-6 border-t border-white/10 py-6 md:flex-row">
-          <p className="text-xs text-white/50">
-            © {new Date().getFullYear()} Dental Theatre. All rights reserved.
-          </p>
-          
-          <div className="flex flex-wrap items-center justify-center gap-4 md:gap-8">
-            <div className="flex items-center gap-2">
-              <span className="text-[10px] font-bold tracking-wider text-white/40 uppercase">
-                Dr. Parul Jangra
-              </span>
-              <span className="rounded bg-white/5 px-2 py-0.5 text-[10px] font-medium text-white/60 border border-white/10">
-                Reg: 009857
-              </span>
-            </div>
-            
-            <div className="flex items-center gap-2">
-              <span className="text-[10px] font-bold tracking-wider text-white/40 uppercase">
-                Dr. Bijender Duhan
-              </span>
-              <span className="rounded bg-white/5 px-2 py-0.5 text-[10px] font-medium text-white/60 border border-white/10">
-                Reg: 6196
-              </span>
             </div>
           </div>
         </div>
