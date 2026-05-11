@@ -82,7 +82,7 @@ export function Footer() {
           </div>
 
           {/* Services */}
-          <div className="flex flex-col gap-5 md:col-span-1 lg:col-span-3">
+          <div className="hidden md:flex flex-col gap-5 md:col-span-1 lg:col-span-3">
             <h3 className="text-[11px] font-bold tracking-widest text-white/50 uppercase">
               Services
             </h3>

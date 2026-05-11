@@ -62,9 +62,9 @@ export function LocationsSection({ id }: { id?: string }) {
 
         <div className="flex flex-col">
           {/* Location Switcher */}
-          <FadeIn direction="up" delay={0.1}>
+          <FadeIn direction="up" delay={0.1} className="mb-4 sm:mb-0">
             <div
-              className="flex w-full gap-2 overflow-x-auto rounded-2xl border border-border/50 bg-slate-100/50 p-2 sm:w-fit sm:flex-wrap sm:overflow-visible sm:p-1.5"
+              className="flex w-fit mx-auto sm:mx-0 max-w-full gap-2 overflow-x-auto rounded-2xl border border-border/50 bg-slate-100/50 p-2 sm:w-fit sm:flex-wrap sm:overflow-visible sm:p-1.5"
               style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}
             >
               <style dangerouslySetInnerHTML={{
@@ -87,7 +87,6 @@ export function LocationsSection({ id }: { id?: string }) {
                   {loc.shortName}
                 </button>
               ))}
-              <div className="w-4 shrink-0 sm:hidden" aria-hidden="true" />
             </div>
           </FadeIn>
 
