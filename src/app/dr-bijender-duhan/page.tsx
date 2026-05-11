@@ -66,10 +66,10 @@ export default function DrBijenderPage() {
               <Badge variant="outline" className="mb-5 text-primary bg-primary/5 border-primary/20 px-3 py-1 text-xs font-semibold tracking-widest uppercase">
                 12+ Years of Surgical Expertise
               </Badge>
-              <h1 className="text-5xl sm:text-6xl font-bold tracking-tight text-foreground leading-[1.1] mb-4">
-                Dr. Bijender<br /><span className="text-primary">Duhan</span>
+              <h1 className="mb-4 text-[2.2rem] whitespace-nowrap font-bold leading-[1.1] tracking-tight text-foreground sm:text-6xl sm:whitespace-normal">
+                Dr. Bijender<span className="hidden sm:inline"><br /></span><span className="inline sm:hidden"> </span><span className="text-primary">Duhan</span>
               </h1>
-              <p className="text-xl font-medium text-muted-foreground mb-6">
+              <p className="mb-6 whitespace-nowrap text-[11px] min-[375px]:text-[12px] font-medium text-muted-foreground sm:text-xl sm:whitespace-normal">
                 BDS (M.I.D.A) · Dental Surgeon · Implantology & Orthodontics
               </p>
               <div className="h-px w-12 bg-primary/30 rounded-full mb-8" />
@@ -77,7 +77,7 @@ export default function DrBijenderPage() {
                 With over twelve years of dedicated practice, Dr. Bijender Duhan is one of Haryana's most experienced oral surgeons. His dual specialty in orthodontics and oral surgery gives him a uniquely comprehensive view of dental health — treating everything from routine corrections to complex facial trauma with equal composure and precision.
               </p>
 
-              <div className="mt-8 flex flex-wrap gap-3">
+              <div className="mt-8 hidden sm:flex flex-wrap gap-3">
                 {["BDS (M.I.D.A)", "Diploma in Ortho & Oral Surgery", "Reg. no. 6196"].map((c) => (
                   <span key={c} className="inline-flex items-center gap-1.5 text-xs font-semibold text-foreground/70 bg-white border border-border/60 rounded-full px-3 py-1.5 shadow-sm">
                     <FileCheck className="size-3 text-primary" />
@@ -98,7 +98,7 @@ export default function DrBijenderPage() {
         <div className="container relative z-10 mx-auto max-w-6xl px-5 sm:px-6 lg:px-10">
           <FadeIn direction="up" className="text-center mb-14">
             <p className="text-[11px] font-semibold tracking-widest uppercase text-primary mb-3">Clinical Expertise</p>
-            <h2 className="text-3xl sm:text-4xl font-bold tracking-tight">The Depth Behind the Diagnosis</h2>
+            <h2 className="text-[1.4rem] min-[375px]:text-2xl whitespace-nowrap sm:whitespace-normal sm:text-4xl font-bold tracking-tight">The Depth Behind the Diagnosis</h2>
             <p className="mt-4 text-muted-foreground max-w-xl mx-auto text-sm leading-relaxed">
               Dr. Bijender's dual training in orthodontics and oral surgery means he approaches each case not just as a procedure, but as part of a patient's complete oral health journey.
             </p>
@@ -107,13 +107,13 @@ export default function DrBijenderPage() {
             {expertise.map((e, i) => (
               <FadeIn key={e.title} direction="up" delay={i * 0.1}>
                 <Card className="h-full rounded-2xl border border-border/60 shadow-sm hover:shadow-md hover:border-primary/20 transition-all duration-300">
-                  <CardContent className="p-7 flex gap-5 items-start">
-                    <div className="shrink-0 size-12 rounded-xl bg-primary/8 border border-primary/10 flex items-center justify-center text-primary">
-                      <e.icon className="size-5" />
+                  <CardContent className="flex flex-col gap-3 p-4 sm:flex-row sm:items-start sm:gap-5 sm:p-7">
+                    <div className="flex size-9 shrink-0 items-center justify-center rounded-xl border border-primary/10 bg-primary/8 text-primary sm:size-12">
+                      <e.icon className="size-4 sm:size-5" />
                     </div>
                     <div>
-                      <h3 className="font-bold text-lg mb-2">{e.title}</h3>
-                      <p className="text-sm text-muted-foreground leading-relaxed">{e.description}</p>
+                      <h3 className="mb-1 text-sm font-bold sm:mb-2 sm:text-lg">{e.title}</h3>
+                      <p className="text-[13px] leading-5 text-muted-foreground sm:text-sm sm:leading-relaxed">{e.description}</p>
                     </div>
                   </CardContent>
                 </Card>
@@ -128,7 +128,7 @@ export default function DrBijenderPage() {
         <div className="absolute -left-48 top-1/2 h-[500px] w-[500px] -translate-y-1/2 rounded-full bg-slate-100/70 blur-[100px] pointer-events-none" />
         <div className="container relative z-10 mx-auto max-w-6xl px-5 sm:px-6 lg:px-10">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-14 items-center">
-            <FadeIn direction="right">
+            <FadeIn direction="right" className="order-2 lg:order-1">
               <div className="space-y-4">
                 {[
                   { label: "Surgical Breadth", detail: "Trained in procedures spanning routine extractions to complex maxillofacial trauma repair." },
@@ -148,7 +148,7 @@ export default function DrBijenderPage() {
               </div>
             </FadeIn>
 
-            <FadeIn direction="left" delay={0.15}>
+            <FadeIn direction="left" delay={0.15} className="order-1 lg:order-2">
               <p className="text-[11px] font-semibold tracking-widest uppercase text-primary mb-3">His Practice Philosophy</p>
               <h2 className="text-3xl sm:text-4xl font-bold tracking-tight mb-6">Twelve Years of Building Trust, One Patient at a Time</h2>
               <div className="space-y-5 text-muted-foreground leading-relaxed text-[15px]">
@@ -168,7 +168,7 @@ export default function DrBijenderPage() {
       </section>
 
       {/* Credentials bar */}
-      <section className="border-t border-border/40 bg-muted/30 py-10">
+      <section className="hidden sm:block border-t border-border/40 bg-muted/30 py-10">
         <div className="container mx-auto max-w-6xl px-5 sm:px-6 lg:px-10">
           <div className="grid grid-cols-2 sm:grid-cols-4 divide-x divide-border/50 text-center">
             {[
