@@ -1,7 +1,7 @@
 export const siteConfig = {
   name: "Dental Theatre",
   description:
-    "Advanced Dental Care by Dr. Parul Jangra in Panipat. Multi-location dental practice offering premium treatments.",
+    "Advanced Dental Care by Dr. Parul Jangra and Dr. Bijender Duhan in Panipat. Multi-location dental practice offering premium treatments.",
   email: "pearljangra160794@gmail.com",
   doctors: [
     {
@@ -11,6 +11,14 @@ export const siteConfig = {
       specialization: "Diploma in Oral Surgery",
       designation: "Implantologist & Aligner Specialist",
       email: "pearljangra160794@gmail.com",
+    },
+    {
+      name: "Dr. Bijender Duhan",
+      degree: "BDS (M.I.D.A)",
+      regNo: "6196",
+      specialization: "Diploma in Ortho & Oral Surgery",
+      designation: "Dental Surgeon & Implantology Expert",
+      email: "bijendersingh196@gmail.com",
     },
   ],
   links: {
@@ -30,7 +38,7 @@ export const siteConfig = {
     {
       name: "Dental Theatre - Gupta Hospital",
       address: "Room No. 25, G.C. Gupta Hospital, Gohana Road, HUDA Sector 11, Panipat",
-      phone: "+91 89302 44673",
+      phone: "+91 89300 10599",
       hours: "Open 24hrs",
       mapUrl: "https://www.google.com/maps/place/Dr+Duhan+%26+Dr+Parul%E2%80%99s+DENTAL+Theatre/@29.3806061,76.9768055,19.75z/data=!4m6!3m5!1s0x48fc794398599e8f:0x54a48e94484ea7e3!8m2!3d29.3806952!4d76.9769885!16s%2Fg%2F11tp5rv3k1?entry=ttu&g_ep=EgoyMDI2MDUwNi4wIKXMDSoASAFQAw%3D%3D",
     },

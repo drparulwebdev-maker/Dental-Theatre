@@ -22,13 +22,13 @@ export function Footer() {
           {/* Logo & About */}
           <div className="flex flex-col gap-5 lg:col-span-3">
             <Link href="/" className="flex items-center gap-2">
-              <Image src="/Logo.png" alt="Dental Theatre Logo" width={15} height={15} className="h-10 w-auto object-contain brightness-0 invert" />
+              <Image src="/Logo.png" alt="Dental Theatre Logo" width={32} height={32} className="h-9 w-auto object-contain" />
               <span className="text-2xl font-bold tracking-tight text-white">
-                Dental <span className="text-sky-200">Theatre</span>
+                <span className="text-sky-200">Dental</span> Theatre
               </span>
             </Link>
             <p className="max-w-[260px] text-[13px] leading-relaxed text-white/70">
-              Premium dental care in Panipat, led by Dr. Parul Jangra, where every visit feels
+              Premium dental care in Panipat, led by a team of expert doctors, where every visit feels
               like a confidence-restoring performance.
             </p>
             <div className="mt-2 flex items-center gap-3">
