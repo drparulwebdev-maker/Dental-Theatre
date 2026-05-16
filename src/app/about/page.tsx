@@ -15,6 +15,7 @@ import {
   Sparkles,
 } from "lucide-react";
 import Link from "next/link";
+import { cn } from "@/lib/utils";
 
 export default function AboutPage() {
   const stats = [
@@ -334,21 +335,27 @@ export default function AboutPage() {
           </div>
 
           <StaggerContainer className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
-            {detailedHighlights.map((item, i) => (
-              <FadeIn key={i} direction="up" delay={i * 0.05}>
-                <div className="group relative h-full rounded-3xl border border-white/10 bg-white/[0.03] p-6 sm:p-8 transition-all duration-300 hover:bg-white/[0.06] hover:border-white/20">
-                  <div className="mb-5 flex size-12 items-center justify-center rounded-2xl bg-white/10 text-white transition-transform duration-300 group-hover:scale-110 group-hover:bg-white/15">
-                    <item.icon className="size-6" />
+            {detailedHighlights.map((item, i) => {
+              const isHiddenOnMobile = item.title === "Laser Procedures" || item.title === "Oral Surgery";
+              return (
+                <FadeIn key={i} direction="up" delay={i * 0.05}>
+                  <div className={cn(
+                    "group relative h-full rounded-3xl border border-white/10 bg-white/[0.03] p-6 sm:p-8 transition-all duration-300 hover:bg-white/[0.06] hover:border-white/20",
+                    isHiddenOnMobile && "hidden md:block"
+                  )}>
+                    <div className="mb-5 flex size-12 items-center justify-center rounded-2xl bg-white/10 text-white transition-transform duration-300 group-hover:scale-110 group-hover:bg-white/15">
+                      <item.icon className="size-6" />
+                    </div>
+                    <h3 className="mb-3 text-xl font-bold text-white">
+                      {item.title}
+                    </h3>
+                    <p className="text-[15px] leading-relaxed text-white/70">
+                      {item.description}
+                    </p>
                   </div>
-                  <h3 className="mb-3 text-xl font-bold text-white">
-                    {item.title}
-                  </h3>
-                  <p className="text-[15px] leading-relaxed text-white/70">
-                    {item.description}
-                  </p>
-                </div>
-              </FadeIn>
-            ))}
+                </FadeIn>
+              );
+            })}
           </StaggerContainer>
 
           <FadeIn direction="up" delay={0.4} className="mt-16 text-center">
@@ -356,7 +363,7 @@ export default function AboutPage() {
               <Button
                 size="lg"
                 variant="secondary"
-                className="inline-flex h-14 items-center justify-center gap-3 px-10 text-base font-bold text-primary hover:bg-white transition-all duration-300 shadow-xl hover:shadow-white/10"
+                className="inline-flex h-14 items-center justify-center gap-2 px-6 sm:px-10 text-base font-bold text-primary hover:bg-white transition-all duration-300 shadow-xl hover:shadow-white/10"
               >
                 Book Your Consultation
                 <ArrowRight className="size-5" />
