@@ -80,7 +80,7 @@ export default function DrBijenderPage() {
               </p>
               <div className="h-px w-12 bg-primary/30 rounded-full mb-8" />
               <p className="text-base text-muted-foreground leading-relaxed max-w-xl">
-                With over twelve years of dedicated practice, Dr. Bijender Duhan is one of Haryana's most experienced oral surgeons. His dual specialty in orthodontics and oral surgery gives him a uniquely comprehensive view of dental health — treating everything from routine corrections to complex facial trauma with equal composure and precision.
+                With a clinical track record spanning over twelve years, Dr. Bijender Duhan is established as one of Haryana&apos;s most capable oral surgeons. His dual specialty in orthodontics and oral surgery allows him to manage complex cases that require both surgical reconstruction and precise occlusal alignment—from routine extractions to advanced maxillofacial trauma.
               </p>
 
               <div className="mt-8 hidden sm:flex flex-wrap gap-3">
@@ -104,9 +104,9 @@ export default function DrBijenderPage() {
         <div className="container relative z-10 mx-auto max-w-6xl px-5 sm:px-6 lg:px-10">
           <FadeIn direction="up" className="text-center mb-14">
             <p className="text-[11px] font-semibold tracking-widest uppercase text-primary mb-3">Clinical Expertise</p>
-            <h2 className="text-[1.4rem] min-[375px]:text-2xl whitespace-nowrap sm:whitespace-normal sm:text-4xl font-bold tracking-tight">The Depth Behind the Diagnosis</h2>
+            <h2 className="text-[1.4rem] min-[375px]:text-2xl whitespace-nowrap sm:whitespace-normal sm:text-4xl font-bold tracking-tight">Surgical Experience at Scale</h2>
             <p className="mt-4 text-muted-foreground max-w-xl mx-auto text-sm leading-relaxed">
-              Dr. Bijender's dual training in orthodontics and oral surgery means he approaches each case not just as a procedure, but as part of a patient's complete oral health journey.
+              Dr. Bijender&apos;s dual training provides a significant clinical advantage: the ability to plan surgical interventions while simultaneously accounting for long-term orthodontic stability.
             </p>
           </FadeIn>
           <StaggerContainer className="grid grid-cols-1 sm:grid-cols-2 gap-6">
@@ -137,11 +137,11 @@ export default function DrBijenderPage() {
             <FadeIn direction="right" className="order-2 lg:order-1">
               <div className="space-y-4">
                 {[
-                  { label: "Surgical Breadth", detail: "Trained in procedures spanning routine extractions to complex maxillofacial trauma repair." },
-                  { label: "Orthodontic Integration", detail: "Seamlessly combines surgical and orthodontic thinking for fully planned, holistic outcomes." },
-                  { label: "Fracture Care Specialist", detail: "Extensive experience managing facial and jaw fractures with precision and compassion." },
-                  { label: "Patient Communication", detail: "Known for clear, calm explanations that ease patient anxiety before any procedure." },
-                  { label: "Evidence-Based Practice", detail: "Every treatment decision is grounded in current clinical evidence and best practices." },
+                  { label: "Surgical Depth", detail: "Expertise in hospital-grade procedures spanning routine extractions to complex maxillofacial trauma." },
+                  { label: "Predictable Outcomes", detail: "A focus on biologically-driven results and long-term stability in every clinical case." },
+                  { label: "Advanced Trauma Care", detail: "Extensive experience in jaw and facial fracture management with functional reconstruction." },
+                  { label: "Clinical Communication", detail: "Specialist consultations defined by clear, evidence-based explanations of treatment options." },
+                  { label: "Technology-First Practice", detail: "Utilizing high-resolution digital infrastructure for precise diagnostic planning." },
                 ].map((item, i) => (
                   <div key={i} className="flex gap-4 items-start p-4 rounded-xl bg-white border border-border/50 shadow-sm">
                     <div className="mt-1 size-2 rounded-full bg-primary shrink-0" />
@@ -155,17 +155,17 @@ export default function DrBijenderPage() {
             </FadeIn>
 
             <FadeIn direction="left" delay={0.15} className="order-1 lg:order-2">
-              <p className="text-[11px] font-semibold tracking-widest uppercase text-primary mb-3">His Practice Philosophy</p>
-              <h2 className="text-3xl sm:text-4xl font-bold tracking-tight mb-6">Twelve Years of Building Trust, One Patient at a Time</h2>
+              <p className="text-[11px] font-semibold tracking-widest uppercase text-primary mb-3">Practice Standards</p>
+              <h2 className="text-3xl sm:text-4xl font-bold tracking-tight mb-6">A Track Record of Surgical Precision</h2>
               <div className="space-y-5 text-muted-foreground leading-relaxed text-[15px]">
                 <p>
-                  Dr. Bijender Duhan's practice is defined by something that cannot be taught in a classroom: the quiet confidence of a surgeon who has seen thousands of cases and learned something valuable from every single one.
+                  Dr. Bijender Duhan&apos;s practice is built on a decade of specialized clinical experience. He provides the surgical foundation for the practice, managing the high-stakes cases that require deep anatomical knowledge and hospital-grade protocols.
                 </p>
                 <p>
-                  His dual diploma in orthodontics and oral surgery is a rarity — it means he can see the full picture of a patient's bite, facial structure, and dental health, and plan treatments that account for all of it simultaneously.
+                  His dual expertise in orthodontics and oral surgery represents a significant advantage for the patient. It means he doesn&apos;t just treat a symptom—he plans the entire structural rehabilitation of the face and jaw, ensuring that function and aesthetics work in tandem.
                 </p>
                 <p>
-                  Patients referred to him with complex fractures, failed treatments, or long-standing pain consistently leave his care with not just a resolved problem, but a renewed trust in dentistry itself.
+                  Specializing in maxillofacial trauma and complex implantology, Dr. Bijender is the lead clinician for patients requiring reconstructive care that restores confidence through predictable, clinical excellence.
                 </p>
               </div>
             </FadeIn>

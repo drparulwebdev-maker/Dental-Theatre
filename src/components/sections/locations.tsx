@@ -16,12 +16,16 @@ const doctors = [
     role: "Implantologist & Aligner Specialist",
     tags: ["Smile Design", "Implants"],
     regNo: "009857",
+    image: "/Dr parul.jpeg",
+    href: "/dr-parul-jangra",
   },
   {
     name: "Dr. Bijender Duhan",
-    role: "Orthodontics & Ortho Surgeon",
+    role: "Oral Surgeon & Implantologist",
     tags: ["Implantology", "Facial Trauma"],
     regNo: "6196",
+    image: "/Dr duhan.jpeg",
+    href: "/dr-bijender-duhan",
   }
 ];
 
@@ -107,10 +111,23 @@ export function LocationsSection({ id }: { id?: string }) {
                   {/* Doctor Profiles - Side by Side */}
                   <div className="order-2 grid grid-cols-1 gap-3 sm:grid-cols-2">
                     {doctors.map((doc) => (
-                      <div key={doc.name} className="rounded-2xl border border-primary/10 bg-slate-50/80 p-4 shadow-sm">
+                      <Link 
+                        key={doc.name} 
+                        href={doc.href}
+                        className="block rounded-2xl border border-primary/10 bg-slate-50/80 p-4 shadow-sm"
+                      >
                         <div className="mb-3 flex items-center gap-3">
-                          <div className="flex size-10 shrink-0 items-center justify-center rounded-full bg-primary/10 text-primary">
-                            <User className="size-5" />
+                          <div className="relative size-10 shrink-0 overflow-hidden rounded-full border border-primary/10 bg-primary/5">
+                            <Image 
+                              src={doc.image} 
+                              alt={doc.name} 
+                              fill 
+                              className={cn(
+                                "object-cover",
+                                doc.name.includes("Parul") ? "scale-[1.8]" : "scale-100"
+                              )} 
+                              sizes="40px"
+                            />
                           </div>
                           <div>
                             <p className="text-[13px] font-bold text-foreground">{doc.name}</p>
@@ -127,7 +144,7 @@ export function LocationsSection({ id }: { id?: string }) {
                             </span>
                           ))}
                         </div>
-                      </div>
+                      </Link>
                     ))}
                   </div>
 

@@ -19,33 +19,33 @@ import { cn } from "@/lib/utils";
 
 export default function AboutPage() {
   const stats = [
-    { title: "1L+", description: "Clinical Cases Resolved", icon: Users },
+    { title: "1L+", description: "Clinical Cases Handled", icon: Users },
     { title: "12K+", description: "Specialist Surgeries", icon: Activity },
-    { title: "2", description: "Modern Diagnostic Centers", icon: Hospital },
-    { title: "19+", description: "Years Specialist Expertise", icon: Sparkles },
+    { title: "2", description: "State-of-the-Art Centers", icon: Hospital },
+    { title: "19+", description: "Years Surgical Expertise", icon: Sparkles },
   ];
 
   const founders = [
     {
       name: "Dr. Parul Jangra",
       credentials: "BDS, M.I.D.A · Diploma in Oral Surgery",
-      speciality: "Aesthetic Specialist & Implantologist",
-      exp: "7+ Years Clinical Practice",
+      speciality: "Implantologist & Aligner Specialist",
+      exp: "7+ Years Surgical Experience",
       href: "/dr-parul-jangra",
       image: "/Dr parul.jpeg",
       imagePos: "object-center",
-      bio: "Dr. Parul focuses on the intersection of clinical health and facial aesthetics. Her expertise in aligners and implants is defined by a commitment to natural-looking results and long-term functional stability.",
+      bio: "Dr. Parul focuses on the intersection of oral health and facial aesthetics. Specializing in advanced implantology and clear aligner therapy, she prioritizes biologically-driven results that restore both function and natural symmetry.",
       accentColor: "from-sky-50 to-blue-50/40",
     },
     {
       name: "Dr. Bijender Duhan",
       credentials: "BDS, M.I.D.A · Diploma in Ortho & Oral Surgery",
-      speciality: "Oral Surgeon & Maxillofacial Expert",
-      exp: "12+ Years Surgical Expertise",
+      speciality: "Oral Surgeon & Implantologist",
+      exp: "12+ Years Surgical Experience",
       href: "/dr-bijender-duhan",
       image: "/Dr duhan.jpeg",
       imagePos: "object-[50%_25%]",
-      bio: "With over a decade of experience in complex maxillofacial surgery and trauma management, Dr. Bijender provides the surgical depth required for high-stakes implantology and corrective jaw procedures.",
+      bio: "With over a decade in maxillofacial surgery and complex trauma management, Dr. Bijender provides the clinical depth required for advanced implantology and oral rehabilitation. His practice is defined by surgical precision and predictable patient outcomes.",
       accentColor: "from-slate-50 to-zinc-50/40",
     },
   ];
@@ -53,59 +53,59 @@ export default function AboutPage() {
   const values = [
     {
       icon: HeartHandshake,
-      title: "Specialist-Led Consultation",
+      title: "Direct Specialist Access",
       description:
-        "We don't believe in generic checklists. Every treatment plan is architected by our lead specialists to ensure long-term clinical predictability.",
+        "We eliminate the middleman. Every consultation and procedure is handled directly by our lead specialists, ensuring high-level clinical decision-making.",
     },
     {
       icon: Microscope,
-      title: "Clinical Accuracy",
+      title: "Surgical-Grade Precision",
       description:
-        "From digital intraoral scanning to CAD/CAM restorations, we utilize advanced diagnostic infrastructure to eliminate guesswork and deliver precise results.",
+        "Our practice utilizes high-resolution digital imaging and hospital-grade sterilization to ensure every treatment is accurate, safe, and long-lasting.",
     },
     {
       icon: ShieldCheck,
-      title: "Ethical Integrity",
+      title: "Ethical Clinical Practice",
       description:
-        "We maintain a strict zero-bias policy in our diagnostics. You get honest consultations and evidence-based recommendations you can verify.",
+        "Transparency is our baseline. We provide evidence-based treatment plans with no hidden costs and a focus on conservative, necessary interventions.",
     },
     {
       icon: Sparkles,
-      title: "Dual-Specialty Standard",
+      title: "Functional Aesthetics",
       description:
-        "By merging oral surgery with aesthetic sensibility, we ensure that even the most complex functional treatments meet elite cosmetic standards.",
+        "A beautiful smile is only as good as its underlying health. We merge aesthetic design with deep clinical knowledge for results that last a lifetime.",
     },
   ];
 
   const detailedHighlights = [
     {
-      title: "Aesthetic Excellence",
-      description: "Advanced Clear Aligner therapy and full-arch smile rehabilitations designed for natural outcomes.",
+      title: "Specialist Implantology",
+      description: "Advanced UV and Non-UV implant systems for high-success oral rehabilitation.",
       icon: Sparkles,
     },
     {
       title: "Surgical Infrastructure",
-      description: "Equipped with hospital-grade sterilization and specialized surgical units for complex oral procedures.",
+      description: "Dedicated units for minor oral surgeries and trauma management in a controlled environment.",
       icon: Hospital,
     },
     {
-      title: "Laser Therapeutics",
-      description: "Single-sitting RCTs and soft-tissue procedures utilizing laser tech for faster, painless recovery.",
+      title: "Precision Therapeutics",
+      description: "Laser-assisted procedures and single-sitting RCTs for faster, more comfortable recovery.",
       icon: Activity,
     },
     {
-      title: "Elite Restorations",
-      description: "High-integrity Zirconia and Emax crowns engineered for durability and perfect shade matching.",
+      title: "Elite Materials",
+      description: "Utilizing Zirconia, Emax, and DMLS technology for durability and natural-looking restorations.",
       icon: Microscope,
     },
     {
-      title: "Complex Oral Surgery",
-      description: "Specialist management for facial fractures, impacted teeth, and cyst removals under one roof.",
+      title: "Oral & Maxillofacial",
+      description: "Expert management of facial fractures, jaw surgeries, and complex surgical extractions.",
       icon: ShieldCheck,
     },
     {
-      title: "Diagnostic Depth",
-      description: "Comprehensive screening protocols, including oral cancer biopsies and digital diagnostic mapping.",
+      title: "Preventive Protocols",
+      description: "Clinical-grade oral cancer screenings and diagnostic protocols for long-term health.",
       icon: CheckCircle2,
     },
   ];
@@ -129,18 +129,16 @@ export default function AboutPage() {
                 <span className="text-primary">Dental Theatre</span>
               </h1>
               <p className="mt-5 max-w-xl text-[15px] leading-7 text-muted-foreground sm:mt-6 sm:max-w-2xl sm:text-lg sm:leading-relaxed sm:mx-auto">
-                Dental Theatre was established to bring world-class specialist 
-                care to Panipat. We bridge the gap between high-stakes oral 
-                surgery and high-end aesthetics, providing a clinical experience 
-                defined by precision and predictability.
+                Dental Theatre is a specialist-led clinical center providing high-end oral surgery and advanced aesthetic dentistry in Panipat. We operate at the intersection of surgical precision and aesthetic excellence, ensuring world-class results without the need for metro-city travel.
               </p>
               <div className="mt-7 sm:mt-8">
                 <div className="mb-5 h-px w-14 rounded-full bg-primary/30 sm:mx-auto sm:mb-7 sm:w-16" />
                 <p className="max-w-2xl text-sm leading-7 text-muted-foreground sm:text-[15px] sm:leading-relaxed">
-                  Founded by two veteran clinicians, Dental Theatre operates on 
-                  the principle that every patient deserves specialized expertise 
-                  usually reserved for metro-city hospitals. Together, our founders 
-                  combine over <strong className="text-foreground font-semibold">19 years of surgical and aesthetic depth</strong>, covering everything from complex maxillofacial trauma to advanced smile architecture—all within a single, state-of-the-art facility.
+                  Founded on the principle of direct specialist access, our practice ensures that every patient is treated by a senior clinician. With a combined track record of over{" "}
+                  <strong className="text-foreground font-semibold">
+                    19 years in oral surgery and orthodontics
+                  </strong>, 
+                  Dr. Duhan and Dr. Parul provide a depth of expertise that spans from complex maxillofacial trauma to the most delicate cosmetic refinements — all within a single, hospital-grade facility.
                 </p>
               </div>
             </FadeIn>
@@ -160,7 +158,7 @@ export default function AboutPage() {
                 The Specialists
               </p>
               <h2 className="text-[1.85rem] font-bold tracking-tight md:text-[2.25rem]">
-                Expertise in Depth: Our Specialists
+                Meet Our Doctors
               </h2>
               <p className="mt-4 max-w-xl text-sm text-muted-foreground sm:mx-auto sm:text-base">
                 Two specialists. One shared commitment to clinical excellence
@@ -235,7 +233,7 @@ export default function AboutPage() {
                 Our Impact
               </p>
               <h2 className="text-[1.85rem] font-bold tracking-tight md:text-[2.25rem]">
-                Clinical Track Record
+                A Legacy of Smiles
               </h2>
               <p className="mt-4 max-w-xl text-sm text-muted-foreground sm:mx-auto sm:text-base">
                 Years of dedication to clinical excellence, reflected in the
