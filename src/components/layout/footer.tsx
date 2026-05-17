@@ -23,9 +23,19 @@ export function Footer() {
           <div className="flex flex-col gap-5 lg:col-span-3">
             <Link href="/" className="flex items-center gap-2">
               <Image src="/Logo.png" alt="Dental Theatre Logo" width={32} height={32} className="h-9 w-auto object-contain" style={{ width: 'auto', height: '2.25rem' }} />
-              <span className="text-2xl font-bold tracking-tight text-white">
-                <span className="text-sky-200">Dental</span> Theatre
-              </span>
+              <div className="flex flex-col items-center">
+                <span className="text-2xl font-bold tracking-tight text-white leading-none">
+                  <span className="text-sky-200">Dental</span> Theatre
+                </span>
+                <div className="flex w-full justify-between text-[13px] font-bold text-white/50 tracking-tight">
+                  <span>By</span>
+                  <span>Dr.</span>
+                  <span>Duhan</span>
+                  <span>&amp;</span>
+                  <span>Dr.</span>
+                  <span>Parul</span>
+                </div>
+              </div>
             </Link>
             <p className="max-w-[260px] text-[13px] leading-relaxed text-white/70">
               Premium dental care in Panipat, led by a team of expert doctors, where every visit feels

@@ -39,9 +39,19 @@ export function Header() {
         <div className="flex items-center gap-2">
           <Link href="/" className="flex items-center gap-2.5 -ml-1.5">
             <Image src="/Logo.png" alt="Dental Theatre Logo" width={32} height={32} className="h-8 w-auto object-contain" style={{ width: 'auto', height: '2rem' }} />
-            <span className="text-2xl font-bold tracking-tight text-primary">
-              Dental <span className="text-foreground/80">Theatre</span>
-            </span>
+            <div className="flex flex-col items-center -space-y-1">
+              <span className="text-2xl font-bold tracking-tighter text-primary leading-tight">
+                Dental <span className="text-foreground/80">Theatre</span>
+              </span>
+              <div className="flex w-full justify-between text-[13px] font-bold text-muted-foreground/90 tracking-tight">
+                <span>By</span>
+                <span>Dr.</span>
+                <span>Duhan</span>
+                <span>&amp;</span>
+                <span>Dr.</span>
+                <span>Parul</span>
+              </div>
+            </div>
           </Link>
         </div>
 
@@ -87,9 +97,19 @@ export function Header() {
               <SheetHeader className="p-6 border-b border-border/40">
                 <SheetTitle className="text-left flex items-center gap-2.5">
                   <Image src="/Logo.png" alt="Dental Theatre Logo" width={28} height={28} className="h-7 w-auto object-contain" style={{ width: 'auto', height: '1.75rem' }} />
-                  <span className="text-xl font-bold tracking-tight text-primary">
-                    Dental <span className="text-foreground/80">Theatre</span>
-                  </span>
+                  <div className="flex flex-col items-center">
+                    <span className="text-xl font-bold tracking-tight text-primary leading-none">
+                      Dental <span className="text-foreground/80">Theatre</span>
+                    </span>
+                    <div className="flex w-full justify-between text-[12px] font-bold text-muted-foreground/90 tracking-tight">
+                      <span>By</span>
+                      <span>Dr.</span>
+                      <span>Duhan</span>
+                      <span>&amp;</span>
+                      <span>Dr.</span>
+                      <span>Parul</span>
+                    </div>
+                  </div>
                 </SheetTitle>
               </SheetHeader>
               

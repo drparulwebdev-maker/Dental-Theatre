@@ -1,5 +1,5 @@
 export const siteConfig = {
-  name: "Dental Theatre",
+  name: "Dental Theatre — By Dr. Duhan & Dr. Parul",
   description:
     "Advanced Dental Care by Dr. Parul Jangra and Dr. Bijender Duhan in Panipat. Multi-location dental practice offering premium treatments.",
   email: "pearljangra160794@gmail.com",
