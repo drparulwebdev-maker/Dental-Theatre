@@ -10,34 +10,34 @@ import { FadeIn } from "@/components/ui-custom/animations";
 
 const faqs = [
   {
-    question: "How often should I visit the dentist for a checkup?",
+    question: "How often should I visit for a checkup?",
     answer:
-      "We recommend visiting us every 6 months for a routine checkup and professional cleaning. Regular visits help us catch potential issues early and maintain your oral health. However, some patients with specific conditions may need to visit more frequently.",
+      "For most patients, a specialist checkup and professional cleaning every 6 months is the gold standard for prevention. If you are undergoing orthodontic or implant treatment, we may recommend a more frequent schedule tailored to your recovery.",
   },
   {
     question: "Is professional teeth whitening safe for my enamel?",
     answer:
-      "Yes, professional teeth whitening performed at our clinic is completely safe. We use advanced, carefully formulated whitening agents and lasers that effectively remove stains without damaging your tooth enamel.",
+      "Completely. Unlike over-the-counter kits, our clinical whitening uses controlled, pH-balanced agents and laser technology. It’s designed to lift deep stains while keeping your enamel fully protected.",
   },
   {
-    question: "Are dental implants a painful procedure?",
+    question: "How painful are dental implants?",
     answer:
-      "Most patients report that getting a dental implant is much less painful than they expected, often less uncomfortable than a tooth extraction. We use local anesthesia to ensure you feel no pain during the procedure, and post-operative discomfort is usually manageable with over-the-counter pain relievers.",
+      "Most patients find the procedure surprisingly manageable—often less uncomfortable than a simple extraction. We use advanced local anesthesia and precise surgical techniques to ensure you feel nothing during the treatment.",
   },
   {
-    question: "What should I do if I have a dental emergency?",
+    question: "What should I do in a dental emergency?",
     answer:
-      "If you experience a dental emergency, such as a knocked-out tooth, severe pain, or bleeding, please contact us immediately. We keep time available in our daily schedule for emergency appointments to provide prompt relief and care.",
+      "Call us immediately. We prioritize dental emergencies—whether it's severe pain, a broken tooth, or an injury—and aim to see you on the same day to provide immediate relief.",
   },
   {
-    question: "How long does a root canal treatment usually take?",
+    question: "How long does a root canal take?",
     answer:
-      "Modern root canal treatments are highly efficient and virtually painless. Most procedures can be completed in one or two visits, depending on the complexity of the tooth. Each appointment typically lasts between 60 to 90 minutes.",
+      "Most root canals can be completed in just one or two sittings. Each session typically takes 60-90 minutes, depending on the complexity of the tooth. Our goal is to save your natural tooth as efficiently as possible.",
   },
   {
-    question: "Do you offer treatments for children (pediatric dentistry)?",
+    question: "Do you treat children?",
     answer:
-      "Yes, we love treating our younger patients! We offer comprehensive pediatric dentistry services in a gentle, reassuring environment to help children build positive associations with dental visits from an early age.",
+      "Yes. We believe early dental experiences shape a lifetime of oral health. Our team uses a gentle, descriptive approach to help children feel curious and comfortable rather than anxious.",
   },
 ];
 

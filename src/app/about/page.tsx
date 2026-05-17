@@ -126,17 +126,7 @@ export default function AboutPage() {
               </Badge>
               <h1 className="max-w-[12ch] text-[2.2rem] font-bold leading-[1.02] tracking-tight sm:max-w-none sm:text-[2.5rem] md:text-[3.25rem]">
                 Welcome to{" "}
-                <span className="relative inline-flex flex-col items-center sm:inline-block">
-                  <span className="text-primary">Dental Theatre</span>
-                  <div className="flex w-full justify-between text-[14px] font-bold text-muted-foreground tracking-tight sm:absolute sm:-bottom-5 sm:right-0 sm:left-0">
-                    <span>By</span>
-                    <span>Dr.</span>
-                    <span>Duhan</span>
-                    <span>&amp;</span>
-                    <span>Dr.</span>
-                    <span>Parul</span>
-                  </div>
-                </span>
+                <span className="text-primary">Dental Theatre</span>
               </h1>
               <p className="mt-5 max-w-xl text-[15px] leading-7 text-muted-foreground sm:mt-6 sm:max-w-2xl sm:text-lg sm:leading-relaxed sm:mx-auto">
                 More than just a dental clinic — Dental Theatre is a destination

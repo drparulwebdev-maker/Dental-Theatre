@@ -28,16 +28,15 @@ export function CTASection() {
             <div className="relative z-10 mx-auto flex max-w-5xl flex-col items-center">
               <div className="mb-4 inline-flex items-center rounded-full border border-white/20 bg-white/10 px-3 py-1.5 text-[10px] font-bold tracking-[0.28em] text-white/90 uppercase backdrop-blur-sm sm:mb-6 sm:px-4 sm:text-[11px]">
                 <span className="mr-2 flex size-1.5 rounded-full bg-sky-300"></span>
-                Start Your Journey
+                Specialist-Led Care
               </div>
               
               <h2 className="mb-5 font-heading text-3xl font-extrabold leading-[1.1] tracking-tight sm:text-5xl md:text-[3.5rem] lg:text-[4rem]">
-                Ready for Your Theatrical<br className="hidden sm:block" /> Transformation?
+                Expert care for your<br className="hidden sm:block" /> smile&apos;s next act.
               </h2>
               
               <p className="mb-8 hidden max-w-2xl text-[15px] leading-[1.8] text-white/80 sm:mb-10 sm:block sm:text-lg sm:leading-[1.85]">
-                Book your appointment and take the first step toward a healthier, brighter,
-                more confident smile with a clinic experience that already feels elevated.
+                From complex oral surgeries to aesthetic refinements, get the specialist care you deserve. Skip the travel to metro cities—world-class dentistry is already here in Panipat.
               </p>
 
               <div className="flex w-full flex-col justify-center gap-4 sm:w-auto sm:flex-row">

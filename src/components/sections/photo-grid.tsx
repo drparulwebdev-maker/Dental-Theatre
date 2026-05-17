@@ -18,23 +18,23 @@ export function PhotoGridSection() {
       <div className="container mx-auto grid max-w-7xl gap-9 px-5 sm:gap-12 sm:px-6 lg:grid-cols-[0.85fr_1.15fr] lg:px-10">
         <FadeIn direction="up" className="flex flex-col justify-center">
           <p className="mb-3 text-[11px] font-bold tracking-[0.3em] text-primary uppercase">
-            Inside The Clinic
+            The Facility
           </p>
-          <h2 className="font-heading text-[2rem] leading-tight sm:text-4xl md:text-5xl md:leading-[1.1]">
-            A calmer, more elevated treatment experience.
+          <h2 className="font-heading text-[2.2rem] font-bold leading-[1.1] tracking-tight sm:text-4xl md:text-5xl lg:text-[3.25rem] [text-wrap:balance] max-w-[15ch] sm:max-w-none">
+            Metro-city standards, right here in Panipat.
           </h2>
-          <p className="mt-4 hidden max-w-xl text-[14px] leading-[1.75] text-muted-foreground sm:mt-5 sm:block sm:text-[15px] sm:leading-[1.85]">
-            Discover the serene and modern environment of our dental clinic, where advanced technology and compassionate care come together to create a calming treatment experience.
+          <p className="mt-6 max-w-[540px] text-[15px] leading-[1.8] text-muted-foreground sm:text-[16px]">
+            Dental Theatre was built to bridge the gap between local accessibility and elite specialist care. We’ve combined hospital-grade sterilization protocols with a modern, patient-first environment to ensure your treatment is as predictable as it is comfortable.
           </p>
 
-          <div className="mt-6 hidden sm:mt-8 sm:block">
+          <div className="mt-8 hidden sm:block">
             {siteConfig.galleryHighlights.slice(0, 1).map((item) => (
               <div
                 key={item.title}
-                className="max-w-md rounded-2xl border border-border/60 bg-white/70 p-5 shadow-[0_20px_60px_-40px_rgba(11,36,73,0.5)] backdrop-blur-sm"
+                className="max-w-[28rem] rounded-[24px] border border-border/50 bg-slate-50/50 p-6 shadow-[0_15px_50px_-30px_rgba(11,36,73,0.3)]"
               >
-                <p className="text-base font-bold text-foreground">{item.title}</p>
-                <p className="mt-1.5 text-sm leading-[1.75] text-muted-foreground">
+                <p className="text-lg font-bold text-foreground tracking-tight">{item.title}</p>
+                <p className="mt-2 text-[14.5px] leading-relaxed text-muted-foreground">
                   {item.description}
                 </p>
               </div>
@@ -43,9 +43,9 @@ export function PhotoGridSection() {
 
           <Link
             href="/gallery"
-            className="mt-8 hidden sm:inline-flex w-fit items-center gap-2 text-sm font-semibold text-primary transition-transform hover:translate-x-1"
+            className="mt-10 hidden sm:inline-flex w-fit items-center gap-2.5 text-[15px] font-bold text-primary transition-all hover:gap-4"
           >
-            Explore full clinic gallery
+            Explore the full gallery
             <ArrowRight className="size-4" />
           </Link>
         </FadeIn>
