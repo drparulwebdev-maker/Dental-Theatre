@@ -10,7 +10,6 @@ import {
   ChevronDown,
 } from "lucide-react";
 import Link from "next/link";
-import Image from "next/image";
 import { siteConfig } from "@/lib/data/site-data";
 import { FadeIn } from "@/components/ui-custom/animations";
 import { Counter } from "@/components/ui-custom/counter";
@@ -37,18 +36,19 @@ export function Hero() {
     <section className="relative min-h-[100svh] flex flex-col overflow-hidden">
 
       {/* ══════════════════════════════════════════
-          FULL-BLEED BACKGROUND IMAGE
+          FULL-BLEED BACKGROUND VIDEO
       ══════════════════════════════════════════ */}
-      <div className="absolute inset-0 z-0">
-        <Image
-          src="/dental_bg.jpg"
-          alt="Dental Theatre — Modern Clinic Interior"
-          fill
-          priority
-          className="object-cover object-center"
-          sizes="100vw"
-          quality={90}
-        />
+      <div className="absolute inset-0 z-0 bg-sky-100">
+        <video
+          autoPlay
+          loop
+          muted
+          playsInline
+          className="h-full w-full object-cover object-center"
+        >
+          <source src="/hero_video.MP4" type="video/mp4" />
+          Your browser does not support the video tag.
+        </video>
         {/* Gradient: transparent in the middle to let the clinic breathe, dark at edges for text */}
         <div className="absolute inset-0 bg-gradient-to-b from-[#020817]/75 via-[#020817]/35 to-[#020817]/85" />
       </div>
