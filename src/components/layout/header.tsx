@@ -38,7 +38,13 @@ export function Header() {
       <div className="container mx-auto flex h-16 items-center justify-between px-6 lg:px-10 max-w-7xl">
         <div className="flex items-center gap-2">
           <Link href="/" className="flex items-center gap-2.5 -ml-1.5">
-            <Image src="/Logo.png" alt="Dental Theatre Logo" width={32} height={32} className="h-8 w-auto object-contain" style={{ width: 'auto', height: '2rem' }} />
+            <Image 
+              src="/Logo.png" 
+              alt="Dental Theatre Logo" 
+              width={32} 
+              height={32} 
+              className="h-8 w-auto object-contain" 
+            />
             <div className="flex flex-col items-center -space-y-1">
               <span className="text-2xl font-bold tracking-tighter text-primary leading-tight">
                 Dental <span className="text-foreground/80">Theatre</span>
@@ -96,7 +102,14 @@ export function Header() {
             <SheetContent side="right" className="w-75 sm:w-87.5 p-0 flex flex-col">
               <SheetHeader className="p-6 border-b border-border/40">
                 <SheetTitle className="text-left flex items-center gap-2.5">
-                  <Image src="/Logo.png" alt="Dental Theatre Logo" width={28} height={28} className="h-7 w-auto object-contain" style={{ width: 'auto', height: '1.75rem' }} />
+                  <Image 
+                    src="/Logo.png" 
+                    alt="Dental Theatre Logo" 
+                    width={28} 
+                    height={28} 
+                    className="h-7 w-auto object-contain" 
+                    style={{ width: 'auto' }}
+                  />
                   <div className="flex flex-col items-center">
                     <span className="text-xl font-bold tracking-tight text-primary leading-none">
                       Dental <span className="text-foreground/80">Theatre</span>

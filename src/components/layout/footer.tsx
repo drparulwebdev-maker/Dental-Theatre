@@ -2,12 +2,10 @@
 
 import Link from "next/link";
 import Image from "next/image";
-import * as LucideIcons from "lucide-react";
+import { Facebook, Instagram, Youtube, Mail, Phone, MapPin } from "lucide-react";
 import { siteConfig } from "@/lib/data/site-data";
 
 export function Footer() {
-  const { Facebook, Instagram, Youtube, Mail, Phone, MapPin } = LucideIcons;
-
   return (
     <footer className="relative w-full overflow-hidden border-t border-white/10 bg-[#081a36] text-white">
       <div className="absolute inset-0">
@@ -22,12 +20,19 @@ export function Footer() {
           {/* Logo & About */}
           <div className="flex flex-col gap-5 lg:col-span-3">
             <Link href="/" className="flex items-center gap-2">
-              <Image src="/Logo.png" alt="Dental Theatre Logo" width={32} height={32} className="h-9 w-auto object-contain" style={{ width: 'auto', height: '2.25rem' }} />
+              <Image 
+                src="/Logo.png" 
+                alt="Dental Theatre Logo" 
+                width={32} 
+                height={32} 
+                className="h-9 w-auto object-contain" 
+                style={{ width: 'auto' }}
+              />
               <div className="flex flex-col items-center">
                 <span className="text-2xl font-bold tracking-tight text-white leading-none">
                   <span className="text-sky-200">Dental</span> Theatre
                 </span>
-                <div className="flex w-full justify-between text-[13px] font-bold text-white/50 tracking-tight">
+                <div className="flex w-full justify-between text-[13px] font-bold text-white/75 tracking-tight">
                   <span>By</span>
                   <span>Dr.</span>
                   <span>Duhan</span>
@@ -37,7 +42,7 @@ export function Footer() {
                 </div>
               </div>
             </Link>
-            <p className="max-w-[260px] text-[13px] leading-relaxed text-white/70">
+            <p className="max-w-[260px] text-[13px] leading-relaxed text-white/85">
               Premium dental care in Panipat, led by a team of expert doctors, where every visit feels
               like a confidence-restoring performance.
             </p>
@@ -45,7 +50,7 @@ export function Footer() {
               <Link
                 href={siteConfig.links.instagram}
                 target="_blank"
-                className="flex size-10 items-center justify-center rounded-xl border border-white/10 bg-white/5 text-white/70 transition-all hover:bg-white/10 hover:text-white"
+                className="flex size-10 items-center justify-center rounded-xl border border-white/10 bg-white/5 text-white/85 transition-all hover:bg-white/10 hover:text-white"
               >
                 <Instagram className="size-4" />
                 <span className="sr-only">Instagram</span>
@@ -53,7 +58,7 @@ export function Footer() {
               {/* <Link
                 href={siteConfig.links.facebook}
                 target="_blank"
-                className="flex size-10 items-center justify-center rounded-xl border border-white/10 bg-white/5 text-white/70 transition-all hover:bg-white/10 hover:text-white"
+                className="flex size-10 items-center justify-center rounded-xl border border-white/10 bg-white/5 text-white/85 transition-all hover:bg-white/10 hover:text-white"
               >
                 <Facebook className="size-4" />
                 <span className="sr-only">Facebook</span>
@@ -61,7 +66,7 @@ export function Footer() {
               <Link
                 href={siteConfig.links.youtube}
                 target="_blank"
-                className="flex size-10 items-center justify-center rounded-xl border border-white/10 bg-white/5 text-white/70 transition-all hover:bg-white/10 hover:text-white"
+                className="flex size-10 items-center justify-center rounded-xl border border-white/10 bg-white/5 text-white/85 transition-all hover:bg-white/10 hover:text-white"
               >
                 <Youtube className="size-4" />
                 <span className="sr-only">YouTube</span>
@@ -71,7 +76,7 @@ export function Footer() {
 
           {/* Quick Links */}
           <div className="flex flex-col gap-5 md:col-span-1 lg:col-span-2 lg:pl-4">
-            <h3 className="text-[11px] font-bold tracking-widest text-white/50 uppercase">
+            <h3 className="text-[11px] font-bold tracking-widest text-white/75 uppercase">
               Quick Links
             </h3>
             <nav className="flex flex-col gap-3">
@@ -86,7 +91,7 @@ export function Footer() {
                 <Link
                   key={link.href}
                   href={link.href}
-                  className="text-[13px] font-medium text-white/70 transition-colors hover:text-sky-300"
+                  className="text-[13px] font-medium text-white/85 transition-colors hover:text-sky-300"
                 >
                   {link.label}
                 </Link>
@@ -96,7 +101,7 @@ export function Footer() {
 
           {/* Services */}
           <div className="hidden md:flex flex-col gap-5 md:col-span-1 lg:col-span-3">
-            <h3 className="text-[11px] font-bold tracking-widest text-white/50 uppercase">
+            <h3 className="text-[11px] font-bold tracking-widest text-white/75 uppercase">
               Services
             </h3>
             <nav className="flex flex-col gap-3">
@@ -104,7 +109,7 @@ export function Footer() {
                 <Link
                   key={service.slug}
                   href={`/services#${service.slug}`}
-                  className="text-[13px] font-medium text-white/70 transition-colors hover:text-sky-300"
+                  className="text-[13px] font-medium text-white/85 transition-colors hover:text-sky-300"
                 >
                   {service.title}
                 </Link>
@@ -114,7 +119,7 @@ export function Footer() {
 
           {/* Get in Touch */}
           <div className="flex flex-col gap-5 md:col-span-2 lg:col-span-4">
-            <h3 className="text-[11px] font-bold tracking-widest text-white/50 uppercase">
+            <h3 className="text-[11px] font-bold tracking-widest text-white/75 uppercase">
               Get in Touch
             </h3>
             <div className="flex flex-col gap-5">
@@ -127,7 +132,7 @@ export function Footer() {
                     </div>
                     <div className="flex flex-col">
                       <strong className="text-[13px] text-white/90 font-semibold leading-tight">{loc.name}</strong>
-                      <span className="mt-1 text-xs leading-relaxed text-white/60">
+                      <span className="mt-1 text-xs leading-relaxed text-white/75">
                         {loc.address}
                       </span>
                     </div>
@@ -141,7 +146,7 @@ export function Footer() {
                   <div className="flex size-7 shrink-0 items-center justify-center rounded-full bg-white/5 border border-white/10">
                     <Phone className="size-3.5 text-sky-300" />
                   </div>
-                  <span className="text-[13px] font-medium text-white/80">
+                  <span className="text-[13px] font-medium text-white/90">
                     8930244673 <span className="mx-2 text-white/30">|</span> 8930010599
                   </span>
                 </div>
@@ -151,8 +156,8 @@ export function Footer() {
                     <Mail className="size-3.5 text-sky-300" />
                   </div>
                   <div className="flex flex-col gap-0.5">
-                    <span className="text-[13px] font-medium text-white/80">pearljangra160794@gmail.com</span>
-                    <span className="text-[13px] font-medium text-white/80">bijendersingh196@gmail.com</span>
+                    <span className="text-[13px] font-medium text-white/90">pearljangra160794@gmail.com</span>
+                    <span className="text-[13px] font-medium text-white/90">bijendersingh196@gmail.com</span>
                   </div>
                 </div>
               </div>

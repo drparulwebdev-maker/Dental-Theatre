@@ -50,7 +50,7 @@ export function TestimonialsSection() {
       </div>
 
       <FadeIn direction="up" delay={0.2}>
-        <div className="overflow-hidden" ref={emblaRef}>
+        <div className="overflow-hidden" ref={emblaRef} role="region" aria-label="Patient Testimonials">
           <div className="flex items-stretch gap-4 px-5 py-3 sm:gap-5 sm:px-6 sm:py-4 lg:px-10">
             {testimonialSlides.map((testimonial, index) => {
               const initials = testimonial.name

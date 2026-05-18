@@ -44,6 +44,7 @@ export function Hero() {
           loop
           muted
           playsInline
+          fetchPriority="high"
           className="h-full w-full object-cover object-center"
         >
           <source src="/hero_video.MP4" type="video/mp4" />
@@ -132,7 +133,7 @@ export function Hero() {
                 <p className="mb-1 text-[2rem] sm:text-4xl font-light tracking-tight text-white drop-shadow-md">
                   <Counter value={value} suffix={suffix} decimals={decimals ?? 0} formatFn={formatFn} />
                 </p>
-                <p className="text-[8px] leading-[1.35] sm:text-[11px] font-semibold text-white/65 sm:text-white/60 uppercase tracking-[0.14em] sm:tracking-[0.15em] text-center drop-shadow-sm">
+                <p className="text-[8px] leading-[1.35] sm:text-[11px] font-semibold text-white/80 uppercase tracking-[0.14em] sm:tracking-[0.15em] text-center drop-shadow-sm">
                   {label}
                 </p>
               </div>

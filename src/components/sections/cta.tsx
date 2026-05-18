@@ -32,7 +32,9 @@ export function CTASection() {
               </div>
               
               <h2 className="mb-5 font-heading text-3xl font-extrabold leading-[1.1] tracking-tight sm:text-5xl md:text-[3.5rem] lg:text-[4rem]">
-                Expert care for your<br className="hidden sm:block" /> smile&apos;s next act.
+                Expert care for your{" "}
+                <br className="hidden sm:block" />
+                smile&apos;s next act.
               </h2>
               
               <p className="mb-8 hidden max-w-2xl text-[15px] leading-[1.8] text-white/80 sm:mb-10 sm:block sm:text-lg sm:leading-[1.85]">

@@ -165,6 +165,7 @@ export function LocationsSection({ id }: { id?: string }) {
                           <div className="absolute right-4 bottom-4 left-4 h-[38%] overflow-hidden rounded-2xl bg-white shadow-2xl ring-4 ring-white/20 sm:left-auto sm:right-6 sm:bottom-6 sm:h-[30%] sm:min-h-[160px] sm:w-[35%] sm:min-w-[200px]">
                             <iframe
                               src={activeLocation.mapEmbed}
+                              title={`Map location of ${activeLocation.name}`}
                               className="w-full h-full border-0"
                               allowFullScreen={false}
                               loading="lazy"
@@ -176,6 +177,7 @@ export function LocationsSection({ id }: { id?: string }) {
                       ) : (
                         <iframe
                           src={activeLocation.mapEmbed}
+                          title={`Map location of ${activeLocation.name}`}
                           className="w-full h-full border-0"
                           allowFullScreen={false}
                           loading="lazy"
@@ -239,6 +241,7 @@ export function LocationsSection({ id }: { id?: string }) {
                         <div className="absolute right-4 bottom-4 left-4 h-[38%] overflow-hidden rounded-2xl bg-white shadow-2xl ring-4 ring-white/20 sm:left-auto sm:right-6 sm:bottom-6 sm:h-[30%] sm:min-h-[160px] sm:w-[35%] sm:min-w-[200px]">
                           <iframe
                             src={activeLocation.mapEmbed}
+                            title={`Map location of ${activeLocation.name}`}
                             className="w-full h-full border-0"
                             allowFullScreen={false}
                             loading="lazy"
@@ -250,6 +253,7 @@ export function LocationsSection({ id }: { id?: string }) {
                     ) : (
                       <iframe
                         src={activeLocation.mapEmbed}
+                        title={`Map location of ${activeLocation.name}`}
                         className="w-full h-full border-0"
                         allowFullScreen={false}
                         loading="lazy"
