@@ -44,7 +44,7 @@ export function Hero() {
           loop
           muted
           playsInline
-          fetchPriority="high"
+          {...({ fetchPriority: "high" } as any)}
           className="h-full w-full object-cover object-center"
         >
           <source src="/hero_video.MP4" type="video/mp4" />
