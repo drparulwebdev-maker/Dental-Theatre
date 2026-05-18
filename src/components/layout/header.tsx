@@ -156,9 +156,9 @@ export function Header() {
                     <Link href={siteConfig.links.instagram} target="_blank" className="p-2 rounded-full bg-background border border-border/60 text-muted-foreground hover:text-primary hover:border-primary/40 transition-all">
                       <Instagram className="size-4" />
                     </Link>
-                    <Link href={siteConfig.links.facebook} target="_blank" className="p-2 rounded-full bg-background border border-border/60 text-muted-foreground hover:text-primary hover:border-primary/40 transition-all">
+                    {/* <Link href={siteConfig.links.facebook} target="_blank" className="p-2 rounded-full bg-background border border-border/60 text-muted-foreground hover:text-primary hover:border-primary/40 transition-all">
                       <Facebook className="size-4" />
-                    </Link>
+                    </Link> */}
                     <Link href={siteConfig.links.youtube} target="_blank" className="p-2 rounded-full bg-background border border-border/60 text-muted-foreground hover:text-primary hover:border-primary/40 transition-all">
                       <Youtube className="size-4" />
                     </Link>

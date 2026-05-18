@@ -50,14 +50,14 @@ export function Footer() {
                 <Instagram className="size-4" />
                 <span className="sr-only">Instagram</span>
               </Link>
-              <Link
+              {/* <Link
                 href={siteConfig.links.facebook}
                 target="_blank"
                 className="flex size-10 items-center justify-center rounded-xl border border-white/10 bg-white/5 text-white/70 transition-all hover:bg-white/10 hover:text-white"
               >
                 <Facebook className="size-4" />
                 <span className="sr-only">Facebook</span>
-              </Link>
+              </Link> */}
               <Link
                 href={siteConfig.links.youtube}
                 target="_blank"
